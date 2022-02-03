@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Template</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/ff9694c54c.js"
+      crossorigin="anonymous"
+    ></script>
 
-	<body>
-		<a href="contact.html">contact</a>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script>
-			$(document).ready(function () {
-				// ...
-			});
-		</script>
-	</body>
+    <title>Template</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="img_logo">
+        <img src="img/jquery_logo-removebg-preview.png" alt="" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="jQuery.html">JQuery</a>
+            <ul class="dropdown">
+              <li>Basis</li>
+              <li>Events</li>
+              <li>Effecten</li>
+              <li>JQuery UI</li>
+              <li>Animatie</li>
+              <li>Plugins</li>
+              <li>Externe data</li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <footer>
+      <div class="social_icons">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="nuttige_links">
+        <a href="#"><img src="img/vschool-link-footer.png" alt="VSchool" /></a>
+        <a href="#"
+          ><img src="img/cvo-link-footer.png" alt="CVO-De-Verdieping"
+        /></a>
+        <a href="#"><img src="img/jquery-link-footer.png" alt="JQuery" /></a>
+      </div>
+
+      <div class="contact_info">
+        <ul>
+          <li>04 11 11 11 11</li>
+          <li>jquery@mail.com</li>
+          <li>Straat 1a</li>
+          <li>1000 Brussel</li>
+          <li>Belgie</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // ...
+      });
+    </script>
+  </body>
 </html>
