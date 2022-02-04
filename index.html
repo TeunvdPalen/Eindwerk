@@ -41,6 +41,55 @@
     </nav>
   </header>
 
+  <main>
+    <div class="container">
+      <!-- IENNE -->
+      <div id="tabs">
+        <ul>
+          <li><a href="#fragment-1">Over de cursus</a></li>
+          <li><a href="#fragment-2">Voor wie</a></li>
+          <li><a href="#fragment-3">Datums</a></li>
+        </ul>
+        <div id="fragment-1">
+          <ul>
+            <li>Basisprincipes javascript - variabelen, functies, strings, arrays,…</li>
+            <li>Basistechnieken jQuery - implementatie script</li>
+            <li>Selectors - selecteren van elementen op de pagina</li>
+            <li>Events - gebeurtenissen opsporen en afhandelen, bijvoorbeeld een muisklik, pagina inladen,…</li>
+            <li>Effects - fade, slide, toggle, animate,…</li>
+            <li>jQuery UI - gebruikers interactie elementen toevoegen en instellen</li>
+            <li>Plugins - een goede plugin zoeken en implementeren</li>
+            <li>JSON en AJAX - externe data inlezen en wegschrijven, zonder een pagina refresh te doen</li>
+          </ul>
+        </div>
+        <div id="fragment-2">
+          Voor iedereen die vlot met een computer en internet kan werken, HTML kennen is een must samen met een basis
+          aan
+          programmeertechnieken.
+        </div>
+        <div id="fragment-3">
+          <p>
+            Onmiddelijk van start na goedkeuring inschrijving.<br>
+            100% online via <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br>
+            Tot 30 juni 2022.
+          </p>
+          <p>
+            Deze cursus is ook onderdeel van de opleiding <a
+              href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper" target="_blank">full-stack
+              webdeveloper</a>.<br>
+            Start in september.<br>
+            50% online, 50% op de campus van cvo de verdieping.<br>
+            Tot juni.
+          </p>
+
+          <p>Je kan uitschrijven tot 7 dagen na je toegang tot de cursus.</p>
+        </div>
+      </div>
+      <!-- IENNE END -->
+    </div>
+
+  </main>
+
   <footer>
     <div class="social_icons">
       <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -67,14 +116,19 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
   <script>
-    $(function () {
-      if ($('.ui-helper-hidden:first').is(':visible') === true) {
+    $(function ()
+    {
+      if ($('.ui-helper-hidden:first').is(':visible') === true)
+      {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });
   </script>
+
+
   <script src="js/eindwerk.js"></script>
 </body>
 
