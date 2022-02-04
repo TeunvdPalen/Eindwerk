@@ -123,3 +123,8 @@ footer {
   font-size: 16px;
   border: none !important;
 }
+
+#tabs h2~p:first-of-type {
+  display: block;
+  margin-bottom: 50px;
+}
