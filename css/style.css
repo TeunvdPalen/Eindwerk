@@ -65,10 +65,12 @@ nav ul li a {
 header input[type=text] {
   border-radius: 90px 0 0 90px;
   font-size: 16px;
-  padding: 5px 0px;
-  border: 2px solid var(--color-primary);
+  height: 30px;
+  border: none;
+  padding: 0;
   width: 0px;
   border-right: none;
+  transform: translateY(-2px);
 }
 
 header input[type=text]:focus {
@@ -78,14 +80,17 @@ header input[type=text]:focus {
 header .search-icon {
   color: var(--color-primary);
   background-color: white;
-  padding: 8px 8px 5px 8px;
+  height: 30px;
+  width: 30px;
   border-radius: 90px;
-  transform: translateX(-10px);
+  transform: translateX(-6.5px) translateY(-1.2px);
   font-size: 16px;
+  text-align: center;
+  line-height: 30px;
 }
 
 header .search-icon-active {
-  border-radius: 0 90px 90px 0 !important;
+  border-radius: 0 90px 90px 0;
 }
 
 .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper.ui-state-active {
@@ -104,15 +109,13 @@ header .search-icon-active {
 
 .ui-autocomplete .ui-menu-item-wrapper {
   width: 180px;
-  margin-left: 1px !important;
-  margin-right: -1px !important
-    /*padding-left: 15px !important;*/
+  padding-left: 15px !important;
 }
 
 ul.ui-autocomplete {
   border: #ea7038 1px solid !important;
   border-radius: 10px;
-  width: 202px !important;
+  width: 210px !important;
 }
 
 /* ------------------------ FOOTER CSS ---------------------- */

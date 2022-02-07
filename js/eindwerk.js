@@ -15,7 +15,8 @@ $(document).ready(function ()
 	//IENNE
 
 	// --TABS
-	$("#tabs").tabs({
+	let $tabs = $("#tabs");
+	$tabs.tabs({
 		active: 0,
 		show: { effect: "blind", duration: 250 },
 		hide: { effect: "blind", duration: 250 },
@@ -23,6 +24,10 @@ $(document).ready(function ()
 
 	// --SEARCH
 	let open = false;
+	let $inputSearch = $('input[type=text]#search');
+	let $icon = $('a .fa-search');
+	let averageSpeed = 600;
+	let speed = 900;
 
 	let autocomplete =
 		[
@@ -60,59 +65,91 @@ $(document).ready(function ()
 
 	$('.fa-search').on('click', function ()
 	{
-		let $this = $('this');
-		let $icon = $('a .fa-search');
-		let speed = 1000;
-
 		if (!open)
 		{
-			$icon.addClass('search-icon-active', speed);
-
-			$('input#search').animate({
-				width: '150px',
-				padding: '5px 15px',
-			}, speed);
-
 			open = true;
+			speed = ((150 - $inputSearch.width()) / 100) * averageSpeed;
+			$inputSearch.stop();
+
+			$icon.addClass('search-icon-active', 100, function ()
+			{
+				$inputSearch.animate({
+					width: '150px',
+					padding: '0, 15px',
+				}, speed)
+			});
 		}
 		else
 		{
-			if ($('input[type=text]#search').val() != "")
-			{
-				for (let i = 0; i < autocomplete.length; ++i)
-				{
-					//TODO extra bijzetten op het einde
-					if ($('input[type=text]#search').val() == autocomplete[i])
-					{
-						if (links[i].includes('index.html#tabs'))
-						{
-							let idx = links[i].substring(links[i].indexOf(' '), links[i].length);
-							console.log(idx);
+			Search();
+			if ($inputSearch.val() == "")
+				CloseSearch();
 
-							window.location.href = links[i];
-							$("#tabs").tabs("option", "active", idx);
-						}
-						else window.location.href = links[i];
-					}
-				}
-			}
-
-			$('input[type=text]#search').val("");
-			$icon.removeClass('search-icon-active', speed);
-			$('input[type=text]#search').animate({
-				width: '0px',
-				padding: '5px 0px',
-			}, speed);
-
-			open = false;
 		}
 	});
 
-	$('input[type=text]#search').autocomplete({
+	$inputSearch.on('keypress', function (e)
+	{
+		// 13 is the ENTER key
+		if (e.which == 13) 
+		{
+			Search();
+		}
+	})
+
+	$inputSearch.autocomplete({
 		source: autocomplete,
 		autoFocus: true,
 		delay: 600,
-
 	})
+
+	function Search()
+	{
+		if ($inputSearch.val() != "")
+		{
+			for (let i = 0; i < autocomplete.length; ++i)
+			{
+				//TODO extra bijzetten op het einde
+				if ($inputSearch.val() == autocomplete[i])
+				{
+					if (links[i].includes('index.html#tabs'))
+					{
+						let idx = links[i].substring(links[i].indexOf(' '), links[i].length);
+						console.log(idx);
+
+						window.location.href = links[i];
+						$tabs.tabs("option", "active", idx);
+					}
+					else window.location.href = links[i];
+
+					CloseSearch();
+				}
+			}
+		}
+	}
+
+	function CloseSearch()
+	{
+		if (open)
+		{
+			speed = ($inputSearch.width() / 100) * averageSpeed;
+
+			$inputSearch.stop();
+
+			$inputSearch.animate({
+				width: '0px',
+				padding: '0',
+			}, speed, function ()
+			{
+				$inputSearch.hide();
+				$icon.removeClass('search-icon-active', 100);
+				$inputSearch.val("");
+			});
+
+			open = false;
+		}
+	}
+
+
 	//IENNE END
 });
