@@ -7,8 +7,12 @@
 
 body {
   margin: 0;
-  font-family: Poppins, sans-serif;
   font-size: 16px;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  font-family: Poppins, sans-serif;
 }
 
 .container {
@@ -41,6 +45,10 @@ nav ul li {
   padding-left: 30px;
 }
 
+nav ul li:last-child {
+  font-size: 16px;
+}
+
 nav ul li:first-of-type {
   padding-left: 0;
 }
@@ -61,6 +69,11 @@ nav ul li a {
 }
 
 /*search*/
+header .searchbar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
 
 header input[type=text] {
   border-radius: 90px 0 0 90px;
@@ -70,7 +83,6 @@ header input[type=text] {
   padding: 0;
   width: 0px;
   border-right: none;
-  transform: translateY(-2px);
 }
 
 header input[type=text]:focus {
@@ -83,7 +95,7 @@ header .search-icon {
   height: 30px;
   width: 30px;
   border-radius: 90px;
-  transform: translateX(-6.5px) translateY(-1.2px);
+  transform: translateX(-7px);
   font-size: 16px;
   text-align: center;
   line-height: 30px;

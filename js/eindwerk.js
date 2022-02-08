@@ -73,6 +73,7 @@ $(document).ready(function ()
 
 			$icon.addClass('search-icon-active', 100, function ()
 			{
+				$inputSearch.show();
 				$inputSearch.animate({
 					width: '150px',
 					padding: '0, 15px',
