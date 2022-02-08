@@ -19,11 +19,11 @@
       <div class="img_logo">
         <img src="img/jquery_logo-removebg-preview.png" alt="" />
       </div>
-      <nav>
+      <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li>
-            <a href="jQuery.html">JQuery</a>
+            <a href="jquery.html">JQuery</a>
             <ul class="dropdown">
               <li>Basis</li>
               <li>Events</li>
@@ -44,7 +44,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <div class="container">
       <!-- IENNE -->
       <div id="tabs">
@@ -124,10 +124,8 @@
 
   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
   <script>
-    $(function ()
-    {
-      if ($('.ui-helper-hidden:first').is(':visible') === true)
-      {
+    $(function () {
+      if ($('.ui-helper-hidden:first').is(':visible') === true) {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });
