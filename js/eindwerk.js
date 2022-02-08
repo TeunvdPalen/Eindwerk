@@ -6,12 +6,14 @@ $(document).ready(function () {
 		icons: { header: 'ui-icon-plus', activeHeader: 'ui-icon-minus' },
 	});
 
+	// Formulier validatie
+
 	// Index pagina inladen met andere paginas
 
 	// let $content = $('#content');
 
 	// $('.main-nav ul li > a').on('click', function (e) {
-	// 	let toLoad = $(this).attr('href');
+	// 	let toLoad = $(this).attr('href') + ' #content';
 	// 	$content.hide('fast', loadContent);
 
 	// 	function loadContent() {
