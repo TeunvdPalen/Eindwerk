@@ -8,22 +8,22 @@ $(document).ready(function () {
 
 	// Index pagina inladen met andere paginas
 
-	let $content = $('#content');
+	// let $content = $('#content');
 
-	$('.main-nav ul li > a').on('click', function (e) {
-		let toLoad = $(this).attr('href');
-		$content.hide('fast', loadContent);
+	// $('.main-nav ul li > a').on('click', function (e) {
+	// 	let toLoad = $(this).attr('href');
+	// 	$content.hide('fast', loadContent);
 
-		function loadContent() {
-			console.log(toLoad);
-			$content.load(toLoad, showNewContent);
-		}
-		function showNewContent() {
-			$content.show('normal');
-		}
+	// 	function loadContent() {
+	// 		console.log(toLoad);
+	// 		$content.load(toLoad, showNewContent);
+	// 	}
+	// 	function showNewContent() {
+	// 		$content.show('normal');
+	// 	}
 
-		e.preventDefault();
-	});
+	// 	e.preventDefault();
+	// });
 
 	// Einde code Teun
 
