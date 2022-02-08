@@ -69,6 +69,7 @@ $(document).ready(function () {
 			$inputSearch.stop();
 
 			$icon.addClass('search-icon-active', 100, function () {
+				$inputSearch.show();
 				$inputSearch.animate(
 					{
 						width: '150px',
