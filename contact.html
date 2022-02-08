@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<a href="index.html">Home</a>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+</head>
+
+<body>
+	<main id="content">
+		<div class="container">
+			<div class="grid-contact">
+				<article class="contact-info">
+					<h1>Contact info</h1>
+					<p><b>Telefoon:</b> 04 11 11 11 11</p>
+					<p><b>E-mail:</b> query@mail.com</p>
+					<p><b>adres:</b> Schachtplein 1</p>
+					<p><b>Gemeente:</b> Heusden-zolder</p>
+				</article>
+				<section>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.7170280929263!2d5.326682915752819!3d51.03984687956102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12594d5049df9%3A0xe4e217ce1e2c8c54!2sSchachtplein%201%2C%203550%20Heusden-Zolder!5e0!3m2!1snl!2sbe!4v1644311538701!5m2!1snl!2sbe"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</section>
+			</div>
+			<form id="form" method="post">
+				<div class="form-grid">
+					<label>
+						Voornaam: <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam">
+					</label>
+					<label>
+						Naam: <input type="text" name="naam" id="naam" placeholder="Naam">
+					</label>
+
+					<label>
+						E-mail: <input type="text" name="email" id="email" placeholder="E-mail">
+					</label>
+					<label>
+						Telefoon: <input type="text" name="telefoon" id="telefoon" placeholder="Telefoon">
+					</label>
+				</div>
+
+				<label>
+					Bericht:<br> <textarea name="bericht" id="bericht" cols="100%" rows="7"
+						placeholder="Vul hier uw bericht in ..."></textarea>
+				</label>
+
+				<input type="submit" id="verzenden" value="Verzenden">
+
+
+			</form>
+		</div>
+	</main>
+	<script src="js/eindwerk.js"></script>
+</body>
+
 </html>

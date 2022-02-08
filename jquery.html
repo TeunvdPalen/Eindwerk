@@ -13,81 +13,82 @@
 </head>
 
 <body>
-  <div class="ui-helper-hidden"></div>
+  <!-- <div class="ui-helper-hidden"></div>
   <header>
-    <div class="img_logo">
-      <img src="img/jquery_logo-removebg-preview.png" alt="" />
+    <div class="container">
+      <div class="img_logo">
+        <img src="img/jquery_logo-removebg-preview.png" alt="" />
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="jquery.html">JQuery</a>
+            <ul class="dropdown">
+              <li>Basis</li>
+              <li>Events</li>
+              <li>Effecten</li>
+              <li>JQuery UI</li>
+              <li>Animatie</li>
+              <li>Plugins</li>
+              <li>Externe data</li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="searchbar">
+            <input type="text" name="search" id="search" placeholder="zoeken..." value="">
+            <a href="#"><i class="fas fa-search search-icon"></i></a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="jQuery.html">JQuery</a>
-          <ul class="dropdown">
-            <li>Basis</li>
-            <li>Events</li>
-            <li>Effecten</li>
-            <li>JQuery UI</li>
-            <li>Animatie</li>
-            <li>Plugins</li>
-            <li>Externe data</li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-        <li>
-          <a href="#"><i class="fas fa-search"></i></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  </header> -->
 
-  <main>
-
+  <main class="#content">
     <div class="container">
       <div id="accordion">
-        <h1>Basis</h1>
+        <h1 id="basis">Basis</h1>
         <div>
           <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
             molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
             leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
           </p>
         </div>
-        <h1>Events</h1>
+        <h1 id="events">Events</h1>
         <div>
           <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
             molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
             leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
           </p>
         </div>
-        <h1>Effecten</h1>
+        <h1 id="effecten">Effecten</h1>
         <div>
           <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
             molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
             leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
           </p>
         </div>
-        <h1>jQuery UI</h1>
+        <h1 id="jquery-ui">jQuery UI</h1>
         <div>
           <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
             molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
             leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
           </p>
         </div>
-        <h1>Animatie</h1>
+        <h1 id="animatie">Animatie</h1>
+        <div>
+          <img src="img/spotlights.png" alt="spotlights">
+          <img src="img/off.png" alt="light switch off">
+          <h1>Met jQuery UI animaties kan je jouw website animeren!</h1>
+        </div>
+        <h1 id="plugins">Plugins</h1>
         <div>
           <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
             molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
             leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
           </p>
         </div>
-        <h1>Plugins</h1>
-        <div>
-          <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
-            molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
-            leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-          </p>
-        </div>
-        <h1>Externe data</h1>
+        <h1 id="externe-data">Externe data</h1>
         <div>
           <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus,
             molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
@@ -99,7 +100,7 @@
 
   </main>
 
-  <footer>
+  <!-- <footer>
     <div class="social_icons">
       <a href="#"><i class="fab fa-facebook-square"></i></a>
       <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -121,14 +122,16 @@
         <li>Belgie</li>
       </ul>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
   <script>
-    $(function () {
-      if ($('.ui-helper-hidden:first').is(':visible') === true) {
+    $(function ()
+    {
+      if ($('.ui-helper-hidden:first').is(':visible') === true)
+      {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });

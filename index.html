@@ -26,43 +26,57 @@
           <li>
             <a href="jQuery.html">JQuery <a href="#"><i
                   class="fas fa-arrow-circle-down arrowIcon dropdownToggle"></i></a></a>
-          </li>
+            <nav class="main-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                  <a href="jquery.html">JQuery</a>
+                  <ul class="dropdown">
+                    <li>Basis</li>
+                    <li>Events</li>
+                    <li>Effecten</li>
+                    <li>JQuery UI</li>
+                    <li>Animatie</li>
+                    <li>Plugins</li>
+                    <li>Externe data</li>
+                  </ul>
+                </li>
 
-          <ul class="jqueryDropdownList dropdownToggle">
-            <li> <a href="#">Default</a></li>
-            <li>
-            <li> <a href="#">Basis</a></li>
-            <li>
-            <li> <a href="#">Events</a></li>
-            </li>
-            <li>
-            <li> <a href="#">Effecten</a></li>
-            </li>
-            <li>
-            <li> <a href="#">JQuery UI</a></li>
-            </li>
-            <li>
-            <li> <a href="#">Animatie</a></li>
-            </li>
-            <li>
-            <li> <a href="#">Plugins</a></li>
-            </li>
-            <li>
-            <li> <a href="#">Externe data</a></li>
-            </li>
-          </ul>
-
-          <li><a href="contact.html">Contact</a></li>
-          <li class="searchbar">
-            <input type="text" name="search" id="search" placeholder="zoeken..." value="" />
-            <a href="#"><i class="fas fa-search search-icon"></i></a>
+                <ul class="jqueryDropdownList dropdownToggle">
+                  <li> <a href="#">Default</a></li>
+                  <li>
+                  <li> <a href="#">Basis</a></li>
+                  <li>
+                  <li> <a href="#">Events</a></li>
           </li>
+          <li>
+          <li> <a href="#">Effecten</a></li>
+          </li>
+          <li>
+          <li> <a href="#">JQuery UI</a></li>
+          </li>
+          <li>
+          <li> <a href="#">Animatie</a></li>
+          </li>
+          <li>
+          <li> <a href="#">Plugins</a></li>
+          </li>
+          <li>
+          <li> <a href="#">Externe data</a></li>
+          </li>
+        </ul>
+
+        <li><a href="contact.html">Contact</a></li>
+        <li class="searchbar">
+          <input type="text" name="search" id="search" placeholder="zoeken..." value="" />
+          <a href="#"><i class="fas fa-search search-icon"></i></a>
+        </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <div class="container">
       <!-- Andreea -->
       <div class="jquerySliderContainer">
@@ -180,15 +194,9 @@
   <script type=" text/javascript " src=" ./slick/slick.min.js "></script>
 
   <script>
-    window.jQuery.ui ||
-      document.write('<script src="js/jquery-ui.min.js"><\/script>');
-  </script>
-  <script>
     $(function () {
-      if ($(".ui-helper-hidden:first").is(":visible") === true) {
-        $(
-          '<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />'
-        ).appendTo("head");
+      if ($('.ui-helper-hidden:first').is(':visible') === true) {
+        $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });
   </script>
