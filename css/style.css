@@ -209,3 +209,40 @@ footer {
   display: block;
   margin-bottom: 50px;
 }
+
+
+/*------------------ANIMATE-----------------------------*/
+
+#animatie~div.ui-accordion-content-active {
+  background-color: #161616;
+  margin: 0;
+  padding: 0;
+  color: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px !important;
+  position: relative;
+}
+
+#animatie~div.ui-accordion-content-active * {
+  z-index: 1;
+  width: 50%;
+  text-align: center;
+}
+
+#animatie~div.ui-accordion-content-active img:first-of-type {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  z-index: 0;
+}
+
+
+#animatie~div.ui-accordion-content-active img:last-of-type {
+  width: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

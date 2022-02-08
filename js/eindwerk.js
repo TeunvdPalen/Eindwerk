@@ -69,12 +69,10 @@ $(document).ready(function ()
 		{
 			open = true;
 			speed = ((150 - $inputSearch.width()) / 100) * averageSpeed;
-			$inputSearch.stop();
 
 			$icon.addClass('search-icon-active', 100, function ()
 			{
-				$inputSearch.show();
-				$inputSearch.animate({
+				$inputSearch.stop().show().animate({
 					width: '150px',
 					padding: '0, 15px',
 				}, speed)
@@ -116,8 +114,6 @@ $(document).ready(function ()
 					if (links[i].includes('index.html#tabs'))
 					{
 						let idx = links[i].substring(links[i].indexOf(' '), links[i].length);
-						console.log(idx);
-
 						window.location.href = links[i];
 						$tabs.tabs("option", "active", idx);
 					}
@@ -135,22 +131,40 @@ $(document).ready(function ()
 		{
 			speed = ($inputSearch.width() / 100) * averageSpeed;
 
-			$inputSearch.stop();
-
-			$inputSearch.animate({
+			$inputSearch.stop().animate({
 				width: '0px',
 				padding: '0',
 			}, speed, function ()
 			{
-				$inputSearch.hide();
+				$inputSearch.hide().val("");
 				$icon.removeClass('search-icon-active', 100);
-				$inputSearch.val("");
 			});
 
 			open = false;
 		}
 	}
 
+
+	// ANIMATIONS
+	let lightOn = false;
+
+	$('#accordion #animatie img.light-button').on('click', function ()
+	{
+		if (lightOn)
+		{
+			lightOn = true;
+			$('#accordion #animatie ~ div img.light-button').attr('scr', 'img/on.png');
+			$('#animatie ~ div.ui-accordion-content-active img').stop().animate({ opacity: '1' }, 1500, 'easeInElastic');
+
+		}
+		else
+		{
+			lightOn = false;
+			$('#accordion #animatie ~ div img.light-button').attr('scr', 'img/off.png');
+			$('#animatie ~ div.ui-accordion-content-active img').stop().animate({ opacity: '0' }, 1500, 'easeInElastic');
+		}
+
+	});
 
 	//IENNE END
 });
