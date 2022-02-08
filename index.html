@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
   <script src="https://kit.fontawesome.com/ff9694c54c.js" crossorigin="anonymous"></script>
-
-  <title>Template</title>
+  <title>JQuery</title>
 </head>
 
 <body>
@@ -20,23 +21,40 @@
         <img src="img/jquery_logo-removebg-preview.png" alt="" />
       </div>
       <nav>
-        <ul>
+        <ul class="main_nav">
           <li><a href="index.html">Home</a></li>
           <li>
-            <a href="jQuery.html">JQuery</a>
-            <ul class="dropdown">
-              <li>Basis</li>
-              <li>Events</li>
-              <li>Effecten</li>
-              <li>JQuery UI</li>
-              <li>Animatie</li>
-              <li>Plugins</li>
-              <li>Externe data</li>
-            </ul>
+            <a href="jQuery.html">JQuery <a href="#"><i
+                  class="fas fa-arrow-circle-down arrowIcon dropdownToggle"></i></a></a>
           </li>
+
+          <ul class="jqueryDropdownList dropdownToggle">
+            <li> <a href="#">Default</a></li>
+            <li>
+            <li> <a href="#">Basis</a></li>
+            <li>
+            <li> <a href="#">Events</a></li>
+            </li>
+            <li>
+            <li> <a href="#">Effecten</a></li>
+            </li>
+            <li>
+            <li> <a href="#">JQuery UI</a></li>
+            </li>
+            <li>
+            <li> <a href="#">Animatie</a></li>
+            </li>
+            <li>
+            <li> <a href="#">Plugins</a></li>
+            </li>
+            <li>
+            <li> <a href="#">Externe data</a></li>
+            </li>
+          </ul>
+
           <li><a href="contact.html">Contact</a></li>
           <li class="searchbar">
-            <input type="text" name="search" id="search" placeholder="zoeken..." value="">
+            <input type="text" name="search" id="search" placeholder="zoeken..." value="" />
             <a href="#"><i class="fas fa-search search-icon"></i></a>
           </li>
         </ul>
@@ -46,6 +64,33 @@
 
   <main>
     <div class="container">
+      <!-- Andreea -->
+      <div class="jquerySliderContainer">
+        <div class="default slider slider7 slick-slide">
+          <img src="img/jquerySlideFrontImg.png" alt="JqueryStandaard" />
+        </div>
+        <div class="basis slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+        <div class="events slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+        <div class="effecten slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+        <div class="jqueryui slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+        <div class="animatie slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+        <div class="plugins slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+        <div class="externedata slider slider7 slick-slide">
+          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+        </div>
+      </div>
       <!-- IENNE -->
       <div id="tabs">
         <ul>
@@ -56,43 +101,54 @@
         <div id="over-de-cursus">
           <p>In de cursus leer je:</p>
           <ul>
-            <li><b>Basisprincipes javascript</b> - variabelen, functies, strings, arrays,…</li>
+            <li>
+              <b>Basisprincipes javascript</b> - variabelen, functies,
+              strings, arrays,…
+            </li>
             <li><b>Basistechnieken jQuery</b> - implementatie script</li>
             <li><b>Selectors</b> - selecteren van elementen op de pagina</li>
-            <li><b>Events</b> - gebeurtenissen opsporen en afhandelen, bijvoorbeeld een muisklik, pagina inladen,…</li>
+            <li>
+              <b>Events</b> - gebeurtenissen opsporen en afhandelen,
+              bijvoorbeeld een muisklik, pagina inladen,…
+            </li>
             <li><b>Effects</b> - fade, slide, toggle, animate,…</li>
-            <li><b>jQuery UI</b> - gebruikers interactie elementen toevoegen en instellen</li>
+            <li>
+              <b>jQuery UI</b> - gebruikers interactie elementen toevoegen en
+              instellen
+            </li>
             <li><b>Plugins</b> - een goede plugin zoeken en implementeren</li>
-            <li><b>JSON en AJAX</b> - externe data inlezen en wegschrijven, zonder een pagina refresh te doen</li>
+            <li>
+              <b>JSON en AJAX</b> - externe data inlezen en wegschrijven,
+              zonder een pagina refresh te doen
+            </li>
           </ul>
         </div>
         <div id="voor-wie">
-          Voor iedereen die vlot met een computer en internet kan werken, HTML kennen is een must samen met een basis
-          aan
-          programmeertechnieken.
+          Voor iedereen die vlot met een computer en internet kan werken, HTML
+          kennen is een must samen met een basis aan programmeertechnieken.
         </div>
         <div id="datums">
           <h2>Online cursus</h2>
           <p>
-            Onmiddelijk van start na goedkeuring inschrijving.<br>
-            100% online via <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br>
-            Tot 30 juni 2022.<br>
+            Onmiddelijk van start na goedkeuring inschrijving.<br />
+            100% online via
+            <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br />
+            Tot 30 juni 2022.<br />
             Je kan uitschrijven tot 7 dagen na je toegang tot de cursus.
           </p>
           <h2>Opleiding full-stack webdeveloper</h2>
           <p>
-            Deze cursus is ook onderdeel van de opleiding <a
-              href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper" target="_blank">full-stack
-              webdeveloper</a>.<br>
-            Start in september.<br>
-            50% online, 50% op de campus van CVO De Verdieping.<br>
+            Deze cursus is ook onderdeel van de opleiding
+            <a href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper" target="_blank">full-stack
+              webdeveloper</a>.<br />
+            Start in september.<br />
+            50% online, 50% op de campus van CVO De Verdieping.<br />
             Tot juni.
           </p>
         </div>
       </div>
       <!-- IENNE END -->
     </div>
-
   </main>
 
   <footer>
@@ -121,18 +177,44 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script type=" text/javascript " src=" ./slick/slick.min.js "></script>
 
-  <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
   <script>
-    $(function ()
-    {
-      if ($('.ui-helper-hidden:first').is(':visible') === true)
-      {
-        $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
+    window.jQuery.ui ||
+      document.write('<script src="js/jquery-ui.min.js"><\/script>');
+  </script>
+  <script>
+    $(function () {
+      if ($(".ui-helper-hidden:first").is(":visible") === true) {
+        $(
+          '<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />'
+        ).appendTo("head");
       }
     });
   </script>
 
+  <script>
+    $(document).ready(function () {
+      $(".jquerySliderContainer ").slick({
+        infinite: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        lazyLoad: 'ondemand',
+        slidesToScroll: 1
+      });
+
+
+      $('.dropdownToggle').hover(function () {
+        $('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
+      });
+
+
+      $('.jqueryDropdownList li').click(function () {
+        TrailerIndex = $(this).index() + 1;
+        $(".jquerySliderContainer").slick('slickGoTo', parseInt(TrailerIndex), false);
+      });
+    });
+  </script>
 
   <script src="js/eindwerk.js"></script>
 </body>
