@@ -2,3 +2,11 @@ ZOEKBALK
 https://api.jqueryui.com/autocomplete/
 https://www.tutorialspoint.com/jqueryui/jqueryui_autocomplete.htm
 https://api.jquery.com/keypress/
+
+
+ANIMATIES
+https://api.jquery.com/hover/
+https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+https://stackoverflow.com/questions/8539079/how-to-start-and-stop-pause-setinterval
+https://stackoverflow.com/questions/42855374/random-position-of-elements-inside-parent-div
+https://bennettfeely.com/clippy/

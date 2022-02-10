@@ -74,7 +74,6 @@
           <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
         </div>
       </div>
-      <!-- IENNE -->
       <div id="tabs">
         <ul>
           <li><a href="#over-de-cursus">Over de cursus</a></li>
@@ -130,7 +129,6 @@
           </p>
         </div>
       </div>
-      <!-- IENNE END -->
     </div>
   </main>
 
@@ -164,15 +162,18 @@
   <script type=" text/javascript " src=" ./js/slick.min.js "></script>
 
   <script>
-    $(function () {
-      if ($('.ui-helper-hidden:first').is(':visible') === true) {
+    $(function ()
+    {
+      if ($('.ui-helper-hidden:first').is(':visible') === true)
+      {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });
   </script>
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function ()
+    {
       $(".jquerySliderContainer ").slick({
         infinite: true,
         slidesToShow: 1,
@@ -182,12 +183,14 @@
       });
 
 
-      $('.dropdownToggle').hover(function () {
+      $('.dropdownToggle').hover(function ()
+      {
         $('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
       });
 
 
-      $('.jqueryDropdownList li').click(function () {
+      $('.jqueryDropdownList li').click(function ()
+      {
         TrailerIndex = $(this).index() + 1;
         $(".jquerySliderContainer").slick('slickGoTo', parseInt(TrailerIndex), false);
       });
