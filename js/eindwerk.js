@@ -7,6 +7,24 @@ $(document).ready(function () {
 		heightStyle: 'content',
 	});
 
+	// Externe afbeelding uploaden en tonen
+	$('#upload').change(function () {
+		const $file = this.files[0];
+		let i = $(this).prev('label').clone();
+		console.log(i);
+		let $fileName = $file.name;
+		$(this).prev('label').text($fileName);
+		console.log($file);
+		if ($file) {
+			let reader = new FileReader();
+			reader.onload = function (event) {
+				console.log(event.target.result);
+				$('#imgPreview').attr('src', event.target.result).show();
+			};
+			reader.readAsDataURL($file);
+		}
+	});
+
 	// Formulier validatie
 	$(function () {
 		$('#demo-form')
@@ -23,11 +41,10 @@ $(document).ready(function () {
 
 	// Index pagina inladen met andere paginas
 
-	//get all link with class panel
 	$('a.panel').click(function () {
 		//reset and highlight the clicked link
-		$('a.panel').removeClass('selected');
-		$(this).addClass('selected');
+		// $('a.panel').removeClass('selected');
+		// $(this).addClass('selected');
 
 		//grab the current item, to be used in resize function
 		current = $(this);
@@ -216,6 +233,17 @@ $(document).ready(function () {
 			}
 		);
 	}
+
+	// --FOOTER
+	$('footer').removeClass('stayDown');
+	let $window = $(window).height();
+	let $page = $('body').height();
+	let difference = $window - $page;
+	console.log(difference);
+	if (difference > 0) {
+		$('footer').addClass('stayDown');
+	}
+
 	//IENNE END
 
 

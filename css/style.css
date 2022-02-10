@@ -383,6 +383,12 @@ footer {
   color: white;
 }
 
+.stayDown {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 /*------------------TABS-----------------------------*/
 .ui-widget-header {
   background: none !important;
