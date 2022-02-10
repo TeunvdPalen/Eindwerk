@@ -216,5 +216,18 @@ $(document).ready(function () {
 			}
 		);
 	}
+
+
+	// --FOOTER
+	$("footer").removeClass("stayDown");
+	let $window = $(window).height();
+	let $page = $('body').height();
+	let difference = $window - $page;
+	console.log(difference);
+	if (difference > 0)
+	{
+		$("footer").addClass("stayDown");
+	}
+
 	//IENNE END
 });

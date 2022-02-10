@@ -17,3 +17,6 @@ https://github.com/flesler/jquery.scrollTo
 
 FORM validatie
 http://parsleyjs.org/doc/index.html
+
+FOOTER
+https://codeontrack.com/keep-footer-bottom-page-jquery/
