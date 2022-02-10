@@ -1,23 +1,30 @@
-$(document).ready(function () {
+$(document).ready(function ()
+{
 	// Begin code Teun
 	// accordion jquery pagina
-	$('#accordion').accordion({
+	let $accordion = $('#accordion');
+
+	$accordion.accordion({
 		collapsible: true,
+		active: false,
 		icons: { header: 'ui-icon-plus', activeHeader: 'ui-icon-minus' },
 		heightStyle: 'content',
 	});
 
 	// Externe afbeelding uploaden en tonen
-	$('#upload').change(function () {
+	$('#upload').change(function ()
+	{
 		const $file = this.files[0];
 		let i = $(this).prev('label').clone();
 		console.log(i);
 		let $fileName = $file.name;
 		$(this).prev('label').text($fileName);
 		console.log($file);
-		if ($file) {
+		if ($file)
+		{
 			let reader = new FileReader();
-			reader.onload = function (event) {
+			reader.onload = function (event)
+			{
 				console.log(event.target.result);
 				$('#imgPreview').attr('src', event.target.result).show();
 			};
@@ -26,22 +33,26 @@ $(document).ready(function () {
 	});
 
 	// Formulier validatie
-	$(function () {
-		$('#demo-form')
+	$(function ()
+	{
+		/*$('#demo-form')
 			.parsley()
-			.on('field:validated', function () {
+			.on('field:validated', function ()
+			{
 				var ok = $('.parsley-error').length === 0;
 				$('.bs-callout-info').toggleClass('hidden', !ok);
 				$('.bs-callout-warning').toggleClass('hidden', ok);
 			})
-			.on('form:submit', function () {
+			.on('form:submit', function ()
+			{
 				return false; // Don't submit form for this demo
-			});
+			});*/
 	});
 
 	// Index pagina inladen met andere paginas
 
-	$('a.panel').click(function () {
+	$('a.panel').click(function ()
+	{
 		//reset and highlight the clicked link
 		// $('a.panel').removeClass('selected');
 		// $(this).addClass('selected');
@@ -57,12 +68,14 @@ $(document).ready(function () {
 	});
 
 	//resize all the items according to the new browser size
-	$(window).resize(function () {
+	$(window).resize(function ()
+	{
 		//call the resizePanel function
 		resizePanel();
 	});
 
-	function resizePanel() {
+	function resizePanel()
+	{
 		//get the browser width and height
 		width = $(window).width();
 		height = $(window).height();
@@ -84,7 +97,7 @@ $(document).ready(function () {
 
 	// --TABS
 	let $tabs = $('#tabs');
-	$tabs.tabs({
+	$('#tabs').tabs({
 		active: 0,
 		show: { effect: 'blind', duration: 250 },
 		hide: { effect: 'blind', duration: 250 },
@@ -97,30 +110,33 @@ $(document).ready(function () {
 	let averageSpeed = 600;
 	let speed = 900;
 
-	let autocomplete = ['Basis', 'Events', 'Effecten', 'jQuery UI', 'Animatie', 'Plugin', 'Externe data', 'Home', 'jQuery', 'Contact', 'Datums', 'Voor wie', 'Over de cursus'];
+	let autocomplete = ['Basis', 'Events', 'Effecten', 'jQuery UI', 'Animatie', 'Plugins', 'Externe data', 'Home', 'jQuery', 'Contact', 'Datums', 'Voor wie', 'Over de cursus'];
 
 	let links = [
-		'jquery.html#basis',
-		'jquery.html#events',
-		'jquery.html#effecten',
-		'jquery.html#jquery-ui',
-		'jquery.html#animatie',
-		'jquery.html#plugin',
-		'jquery.html#externe-data',
-		'index.html',
-		'jquery.html',
-		'contact.html',
-		'index.html#tabs 2',
-		'index.html#tabs 1',
-		'index.html#tabs 0',
+		'#jquery #accordion 0',
+		'#jquery #accordion 1',
+		'#jquery #accordion 2',
+		'#jquery #accordion 3',
+		'#jquery #accordion 4',
+		'#jquery #accordion 5',
+		'#jquery #accordion 6',
+		'#index',
+		'#jquery',
+		'#contact',
+		'#index #tabs 2',
+		'#index #tabs 1',
+		'#index #tabs 0',
 	];
 
-	$('.fa-search').on('click', function () {
-		if (!open) {
+	$('.fa-search').on('click', function ()
+	{
+		if (!open)
+		{
 			open = true;
 			speed = ((150 - $inputSearch.width()) / 100) * averageSpeed;
 
-			$icon.addClass('search-icon-active', 100, function () {
+			$icon.addClass('search-icon-active', 100, function ()
+			{
 				$inputSearch.stop().show().animate(
 					{
 						width: '150px',
@@ -129,15 +145,18 @@ $(document).ready(function () {
 					speed
 				);
 			});
-		} else {
+		} else
+		{
 			Search();
 			if ($inputSearch.val() == '') CloseSearch();
 		}
 	});
 
-	$inputSearch.on('keypress', function (e) {
+	$inputSearch.on('keypress', function (e)
+	{
 		// 13 is the ENTER key
-		if (e.which == 13) {
+		if (e.which == 13)
+		{
 			Search();
 		}
 	});
@@ -148,16 +167,29 @@ $(document).ready(function () {
 		delay: 600,
 	});
 
-	function Search() {
-		if ($inputSearch.val() != '') {
-			for (let i = 0; i < autocomplete.length; ++i) {
-				//TODO extra bijzetten op het einde
-				if ($inputSearch.val() == autocomplete[i]) {
-					if (links[i].includes('index.html#tabs')) {
-						let idx = links[i].substring(links[i].indexOf(' '), links[i].length);
-						window.location.href = links[i];
-						$tabs.tabs('option', 'active', idx);
-					} else window.location.href = links[i];
+	function Search()
+	{
+		if ($inputSearch.val() != '')
+		{
+			for (let i = 0; i < autocomplete.length; ++i)
+			{
+				if ($inputSearch.val() == autocomplete[i])
+				{
+					if (links[i].includes(' '))
+					{
+						let page = links[i].substring(0, links[i].indexOf(' '));
+						let tool = links[i].substring(links[i].indexOf(' ') + 1, links[i].lastIndexOf(' '));
+						let idx = links[i].substring(links[i].lastIndexOf(' ') + 1, links[i].length);
+						$('#wrapper').scrollTo(page, 800, function ()
+						{
+							if (tool == '#accordion')
+								$(tool).accordion('option', 'active', parseInt(idx));
+							else if (tool == '#tabs')
+								$(tool).tabs('option', 'active', parseInt(idx));
+						});
+					}
+					//NORMAAL
+					else $('#wrapper').scrollTo(links[i], 800);
 
 					CloseSearch();
 				}
@@ -165,8 +197,10 @@ $(document).ready(function () {
 		}
 	}
 
-	function CloseSearch() {
-		if (open) {
+	function CloseSearch()
+	{
+		if (open)
+		{
 			speed = ($inputSearch.width() / 100) * averageSpeed;
 
 			$inputSearch.stop().animate(
@@ -175,7 +209,8 @@ $(document).ready(function () {
 					padding: '0',
 				},
 				speed,
-				function () {
+				function ()
+				{
 					$inputSearch.hide().val('');
 					$icon.removeClass('search-icon-active', 100);
 				}
@@ -191,23 +226,28 @@ $(document).ready(function () {
 	//let $animImg = $('#animatie + div.ui-accordion-content-active img'); werkt niet?
 
 	$animDiv.hover(
-		function () {
+		function ()
+		{
 			$('#animatie + div.ui-accordion-content-active img')
 				.stop()
-				.animate({ opacity: '1' }, 1500, 'easeInElastic', function () {
+				.animate({ opacity: '1' }, 1500, 'easeInElastic', function ()
+				{
 					twinkling = setInterval(Twinkle, 500);
 				});
 		},
-		function () {
+		function ()
+		{
 			clearInterval(twinkling);
 			$('#animatie + div.ui-accordion-content-active img').stop().animate({ opacity: '0' }, 1500, 'easeInElastic');
 		}
 	);
 
-	function Twinkle() {
+	function Twinkle()
+	{
 		let amount = Math.floor(Math.random() * 20) + 2;
 
-		for (let i = 0; i < amount; ++i) {
+		for (let i = 0; i < amount; ++i)
+		{
 			let size = Math.floor(Math.random() * 25);
 			let left = Math.random() * ($animDiv.width() - size * 2);
 			let top = Math.random() * ($animDiv.height() - size * 2);
@@ -220,13 +260,15 @@ $(document).ready(function () {
 				opacity: '1',
 			},
 			500,
-			function () {
+			function ()
+			{
 				$(this).animate(
 					{
 						opacity: '0',
 					},
 					500,
-					function () {
+					function ()
+					{
 						$(this).remove();
 					}
 				);
@@ -240,7 +282,8 @@ $(document).ready(function () {
 	let $page = $('body').height();
 	let difference = $window - $page;
 	console.log(difference);
-	if (difference > 0) {
+	if (difference > 0)
+	{
 		$('footer').addClass('stayDown');
 	}
 

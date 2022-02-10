@@ -79,7 +79,7 @@
                 <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
               </div>
             </div>
-            <!-- IENNE -->
+
             <div id="tabs">
               <ul>
                 <li><a href="#over-de-cursus">Over de cursus</a></li>
@@ -136,7 +136,6 @@
                 </p>
               </div>
             </div>
-            <!-- IENNE END -->
           </div>
         </main>
 
@@ -187,8 +186,8 @@
               <h1 id="animatie">Animatie</h1>
               <div>
                 <img src="img/spotlights.png" alt="spotlights">
-                <img src="img/off.png" alt="light switch off">
-                <h1>Met jQuery UI animaties kan je jouw website animeren!</h1>
+                <div class="twinkle"></div>
+                <h1>Met jQuery UI animaties kan je jouw website dynamischer maken!</h1>
               </div>
               <h1 id="plugins">Plugins</h1>
               <div>
@@ -310,15 +309,18 @@
   <script src="js/nl.js"></script>
 
   <script>
-    $(function () {
-      if ($('.ui-helper-hidden:first').is(':visible') === true) {
+    $(function ()
+    {
+      if ($('.ui-helper-hidden:first').is(':visible') === true)
+      {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });
   </script>
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function ()
+    {
       $(".jquerySliderContainer ").slick({
         infinite: true,
         slidesToShow: 1,
@@ -328,12 +330,14 @@
       });
 
 
-      $('.dropdownToggle').hover(function () {
+      $('.dropdownToggle').hover(function ()
+      {
         $('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
       });
 
 
-      $('.jqueryDropdownList li').click(function () {
+      $('.jqueryDropdownList li').click(function ()
+      {
         TrailerIndex = $(this).index() + 1;
         $(".jquerySliderContainer").slick('slickGoTo', parseInt(TrailerIndex), false);
       });
