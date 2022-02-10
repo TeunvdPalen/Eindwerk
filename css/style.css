@@ -188,8 +188,11 @@ ul.ui-autocomplete {
 /* ------------------------ FOOTER CSS ---------------------- */
 footer {
 	background-color: #3e4756;
+}
+
+footer .container {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -233,6 +236,12 @@ footer {
 .footerContactInfo li {
 	list-style: none;
 	color: white;
+}
+
+.stayDown {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 /*------------------TABS-----------------------------*/
