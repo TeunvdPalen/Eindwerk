@@ -101,65 +101,67 @@
                 <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
               </div>
             </div>
-            <!-- Andreea einde -->
-            <!-- IENNE -->
-            <div id="tabs">
-              <ul>
-                <li><a href="#over-de-cursus">Over de cursus</a></li>
-                <li><a href="#voor-wie">Voor wie</a></li>
-                <li><a href="#datums">Datums</a></li>
-              </ul>
-              <div id="over-de-cursus">
-                <p>In de cursus leer je:</p>
+            <<<<<<< HEAD <!-- Andreea einde -->
+              <!-- IENNE -->
+              =======
+
+              >>>>>>> f15ce5100a661d5d4dd2552212ad9a23f543e321
+              <div id="tabs">
                 <ul>
-                  <li>
-                    <b>Basisprincipes javascript</b> - variabelen, functies,
-                    strings, arrays,…
-                  </li>
-                  <li><b>Basistechnieken jQuery</b> - implementatie script</li>
-                  <li><b>Selectors</b> - selecteren van elementen op de pagina</li>
-                  <li>
-                    <b>Events</b> - gebeurtenissen opsporen en afhandelen,
-                    bijvoorbeeld een muisklik, pagina inladen,…
-                  </li>
-                  <li><b>Effects</b> - fade, slide, toggle, animate,…</li>
-                  <li>
-                    <b>jQuery UI</b> - gebruikers interactie elementen toevoegen en
-                    instellen
-                  </li>
-                  <li><b>Plugins</b> - een goede plugin zoeken en implementeren</li>
-                  <li>
-                    <b>JSON en AJAX</b> - externe data inlezen en wegschrijven,
-                    zonder een pagina refresh te doen
-                  </li>
+                  <li><a href="#over-de-cursus">Over de cursus</a></li>
+                  <li><a href="#voor-wie">Voor wie</a></li>
+                  <li><a href="#datums">Datums</a></li>
                 </ul>
+                <div id="over-de-cursus">
+                  <p>In de cursus leer je:</p>
+                  <ul>
+                    <li>
+                      <b>Basisprincipes javascript</b> - variabelen, functies,
+                      strings, arrays,…
+                    </li>
+                    <li><b>Basistechnieken jQuery</b> - implementatie script</li>
+                    <li><b>Selectors</b> - selecteren van elementen op de pagina</li>
+                    <li>
+                      <b>Events</b> - gebeurtenissen opsporen en afhandelen,
+                      bijvoorbeeld een muisklik, pagina inladen,…
+                    </li>
+                    <li><b>Effects</b> - fade, slide, toggle, animate,…</li>
+                    <li>
+                      <b>jQuery UI</b> - gebruikers interactie elementen toevoegen en
+                      instellen
+                    </li>
+                    <li><b>Plugins</b> - een goede plugin zoeken en implementeren</li>
+                    <li>
+                      <b>JSON en AJAX</b> - externe data inlezen en wegschrijven,
+                      zonder een pagina refresh te doen
+                    </li>
+                  </ul>
+                </div>
+                <div id="voor-wie">
+                  Voor iedereen die vlot met een computer en internet kan werken, HTML
+                  kennen is een must samen met een basis aan programmeertechnieken.
+                </div>
+                <div id="datums">
+                  <h2>Online cursus</h2>
+                  <p>
+                    Onmiddelijk van start na goedkeuring inschrijving.<br />
+                    100% online via
+                    <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br />
+                    Tot 30 juni 2022.<br />
+                    Je kan uitschrijven tot 7 dagen na je toegang tot de cursus.
+                  </p>
+                  <h2>Opleiding full-stack webdeveloper</h2>
+                  <p>
+                    Deze cursus is ook onderdeel van de opleiding
+                    <a href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper"
+                      target="_blank">full-stack
+                      webdeveloper</a>.<br />
+                    Start in september.<br />
+                    50% online, 50% op de campus van CVO De Verdieping.<br />
+                    Tot juni.
+                  </p>
+                </div>
               </div>
-              <div id="voor-wie">
-                Voor iedereen die vlot met een computer en internet kan werken, HTML
-                kennen is een must samen met een basis aan programmeertechnieken.
-              </div>
-              <div id="datums">
-                <h2>Online cursus</h2>
-                <p>
-                  Onmiddelijk van start na goedkeuring inschrijving.<br />
-                  100% online via
-                  <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br />
-                  Tot 30 juni 2022.<br />
-                  Je kan uitschrijven tot 7 dagen na je toegang tot de cursus.
-                </p>
-                <h2>Opleiding full-stack webdeveloper</h2>
-                <p>
-                  Deze cursus is ook onderdeel van de opleiding
-                  <a href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper"
-                    target="_blank">full-stack
-                    webdeveloper</a>.<br />
-                  Start in september.<br />
-                  50% online, 50% op de campus van CVO De Verdieping.<br />
-                  Tot juni.
-                </p>
-              </div>
-            </div>
-            <!-- IENNE END -->
           </div>
         </main>
 
@@ -208,8 +210,8 @@
                 <h1 id="animatie">Animatie</h1>
                 <div>
                   <img src="img/spotlights.png" alt="spotlights">
-                  <img src="img/off.png" alt="light switch off">
-                  <h1>Met jQuery UI animaties kan je jouw website animeren!</h1>
+                  <div class="twinkle"></div>
+                  <h1>Met jQuery UI animaties kan je jouw website dynamischer maken!</h1>
                 </div>
                 <h1 id="plugins">Plugins</h1>
                 <div>
@@ -230,10 +232,28 @@
                     <input id="upload" name='upload' type="file" accept="image/*" style="display:none;">
                   </form>
                   <div>
-                    <img id="imgPreview" src="#" alt="afbeelding" style="display:none;">
+                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                      metus,
+                      molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                      Proin
+                      viverra
+                      leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                    </p>
+                  </div>
+                  <h1 id="externe-data">Externe data</h1>
+                  <div>
+                    <h1>Upload een afbeelding</h1>
+                    <form>
+                      <label for="upload">
+                        <i class="fa fa-cloud-upload"></i> Upload een afbeelding
+                      </label>
+                      <input id="upload" name='upload' type="file" accept="image/*" style="display:none;">
+                    </form>
+                    <div>
+                      <img id="imgPreview" src="#" alt="afbeelding" style="display:none;">
+                    </div>
                   </div>
                 </div>
-              </div>
 
           </main>
 
