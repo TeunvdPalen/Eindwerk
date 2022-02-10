@@ -38,7 +38,7 @@ header .container {
 	padding-left: 0;
 }
 
-nav .main_nav > li {
+nav .main_nav>li {
 	list-style: none;
 	font-size: 24px;
 	padding-left: 30px;
@@ -298,7 +298,7 @@ a.ui-button:active,
 	border: none !important;
 }
 
-#tabs h2 ~ p:first-of-type {
+#tabs h2~p:first-of-type {
 	display: block;
 	margin-bottom: 50px;
 }
@@ -335,14 +335,14 @@ form {
 	margin-bottom: 1rem;
 }
 
-#tabs h2 ~ p:first-of-type {
+#tabs h2~p:first-of-type {
 	display: block;
 	margin-bottom: 50px;
 }
 
 /*------------------ANIMATE-----------------------------*/
 
-#animatie + div.ui-accordion-content-active {
+#animatie+div.ui-accordion-content-active {
 	background-color: #161616;
 	margin: 0;
 	padding: 0;
@@ -354,17 +354,17 @@ form {
 	position: relative;
 }
 
-#animatie + div.ui-accordion-content-active * {
+#animatie+div.ui-accordion-content-active * {
 	z-index: 1;
 	width: 50%;
 	text-align: center;
 }
 
-#animatie + div.ui-accordion-content-active h1 {
+#animatie+div.ui-accordion-content-active h1 {
 	margin-top: 150px;
 }
 
-#animatie + div.ui-accordion-content-active img {
+#animatie+div.ui-accordion-content-active img {
 	opacity: 0;
 	width: 100%;
 	position: absolute;
@@ -372,7 +372,7 @@ form {
 	z-index: 0;
 }
 
-#animatie + div div.twinkle {
+#animatie+div div.twinkle {
 	width: 50px;
 	height: 50px;
 	background: white;
