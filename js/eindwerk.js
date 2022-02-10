@@ -1,5 +1,4 @@
-$(document).ready(function ()
-{
+$(document).ready(function () {
 	// Begin code Teun
 	// accordion jquery pagina
 	$('#accordion').accordion({
@@ -9,37 +8,58 @@ $(document).ready(function ()
 	});
 
 	// Formulier validatie
-	$('#form')
-		//TODO .parsley()
-		.on('field:validated', function ()
-		{
-			var ok = $('.parsley-error').length === 0;
-			$('.bs-callout-info').toggleClass('hidden', !ok);
-			$('.bs-callout-warning').toggleClass('hidden', ok);
-		})
-		.on('form:submit', function ()
-		{
-			return false; // Don't submit form for this demo
-		});
+	$(function () {
+		$('#demo-form')
+			.parsley()
+			.on('field:validated', function () {
+				var ok = $('.parsley-error').length === 0;
+				$('.bs-callout-info').toggleClass('hidden', !ok);
+				$('.bs-callout-warning').toggleClass('hidden', ok);
+			})
+			.on('form:submit', function () {
+				return false; // Don't submit form for this demo
+			});
+	});
 
 	// Index pagina inladen met andere paginas
 
-	// let $content = $('#content');
+	//get all link with class panel
+	$('a.panel').click(function () {
+		//reset and highlight the clicked link
+		$('a.panel').removeClass('selected');
+		$(this).addClass('selected');
 
-	// $('.main-nav li > a').on('click', function (e) {
-	// 	let toLoad = $(this).attr('href') + ' #content';
-	// 	$content.hide('fast', loadContent);
+		//grab the current item, to be used in resize function
+		current = $(this);
 
-	// 	function loadContent() {
-	// 		console.log(toLoad);
-	// 		$content.load(toLoad, showNewContent);
-	// 	}
-	// 	function showNewContent() {
-	// 		$content.show('normal');
-	// 	}
+		//scroll it to the destination
+		$('#wrapper').scrollTo($(this).attr('href'), 800);
 
-	// 	e.preventDefault();
-	// });
+		//cancel the link default behavior
+		return false;
+	});
+
+	//resize all the items according to the new browser size
+	$(window).resize(function () {
+		//call the resizePanel function
+		resizePanel();
+	});
+
+	function resizePanel() {
+		//get the browser width and height
+		width = $(window).width();
+		height = $(window).height();
+
+		//get the mask width: width * total of items
+		mask_width = width * $('.item').length;
+
+		//set the dimension
+		$('#wrapper, .item').css({ width: width, height: height });
+		$('#mask').css({ width: mask_width, height: height });
+
+		//if the item is displayed incorrectly, set it to the corrent pos
+		$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+	}
 
 	// Einde code Teun
 
@@ -78,32 +98,29 @@ $(document).ready(function ()
 		'index.html#tabs 0',
 	];
 
-	$('.fa-search').on('click', function ()
-	{
-		if (!open)
-		{
+	$('.fa-search').on('click', function () {
+		if (!open) {
 			open = true;
 			speed = ((150 - $inputSearch.width()) / 100) * averageSpeed;
 
-			$icon.addClass('search-icon-active', 100, function ()
-			{
-				$inputSearch.stop().show().animate({
-					width: '150px',
-					padding: '0, 15px',
-				}, speed)
+			$icon.addClass('search-icon-active', 100, function () {
+				$inputSearch.stop().show().animate(
+					{
+						width: '150px',
+						padding: '0, 15px',
+					},
+					speed
+				);
 			});
-		} else
-		{
+		} else {
 			Search();
 			if ($inputSearch.val() == '') CloseSearch();
 		}
 	});
 
-	$inputSearch.on('keypress', function (e)
-	{
+	$inputSearch.on('keypress', function (e) {
 		// 13 is the ENTER key
-		if (e.which == 13)
-		{
+		if (e.which == 13) {
 			Search();
 		}
 	});
@@ -114,17 +131,12 @@ $(document).ready(function ()
 		delay: 600,
 	});
 
-	function Search()
-	{
-		if ($inputSearch.val() != '')
-		{
-			for (let i = 0; i < autocomplete.length; ++i)
-			{
+	function Search() {
+		if ($inputSearch.val() != '') {
+			for (let i = 0; i < autocomplete.length; ++i) {
 				//TODO extra bijzetten op het einde
-				if ($inputSearch.val() == autocomplete[i])
-				{
-					if (links[i].includes('index.html#tabs'))
-					{
+				if ($inputSearch.val() == autocomplete[i]) {
+					if (links[i].includes('index.html#tabs')) {
 						let idx = links[i].substring(links[i].indexOf(' '), links[i].length);
 						window.location.href = links[i];
 						$tabs.tabs('option', 'active', idx);
@@ -136,65 +148,73 @@ $(document).ready(function ()
 		}
 	}
 
-	function CloseSearch()
-	{
-		if (open)
-		{
+	function CloseSearch() {
+		if (open) {
 			speed = ($inputSearch.width() / 100) * averageSpeed;
 
-			$inputSearch.stop().animate({
-				width: '0px',
-				padding: '0',
-			}, speed, function ()
-			{
-				$inputSearch.hide().val("");
-				$icon.removeClass('search-icon-active', 100);
-			});
+			$inputSearch.stop().animate(
+				{
+					width: '0px',
+					padding: '0',
+				},
+				speed,
+				function () {
+					$inputSearch.hide().val('');
+					$icon.removeClass('search-icon-active', 100);
+				}
+			);
 
 			open = false;
 		}
 	}
-
 
 	// ANIMATIONS
 	let twinkling = null;
 	let $animDiv = $('#animatie + div');
 	//let $animImg = $('#animatie + div.ui-accordion-content-active img'); werkt niet?
 
-	$animDiv.hover(function ()
-	{
-		$('#animatie + div.ui-accordion-content-active img').stop().animate({ opacity: '1' }, 1500, 'easeInElastic', function () { twinkling = setInterval(Twinkle, 500); });
+	$animDiv.hover(
+		function () {
+			$('#animatie + div.ui-accordion-content-active img')
+				.stop()
+				.animate({ opacity: '1' }, 1500, 'easeInElastic', function () {
+					twinkling = setInterval(Twinkle, 500);
+				});
+		},
+		function () {
+			clearInterval(twinkling);
+			$('#animatie + div.ui-accordion-content-active img').stop().animate({ opacity: '0' }, 1500, 'easeInElastic');
+		}
+	);
 
-	}, function ()
-	{
-		clearInterval(twinkling);
-		$('#animatie + div.ui-accordion-content-active img').stop().animate({ opacity: '0' }, 1500, 'easeInElastic');
-	});
-
-	function Twinkle()
-	{
+	function Twinkle() {
 		let amount = Math.floor(Math.random() * 20) + 2;
 
-		for (let i = 0; i < amount; ++i)
-		{
+		for (let i = 0; i < amount; ++i) {
 			let size = Math.floor(Math.random() * 25);
 			let left = Math.random() * ($animDiv.width() - size * 2);
 			let top = Math.random() * ($animDiv.height() - size * 2);
 			let rot = Math.random() * 360;
 			$animDiv.append("<div class='twinkle'></div>");
-			$('#animatie+div div.twinkle:last-of-type').css({ "width": size, "height": size, "left": left, "top": top, "-webkit-transform": "rotate(" + rot + "deg)" });
+			$('#animatie+div div.twinkle:last-of-type').css({ width: size, height: size, left: left, top: top, '-webkit-transform': 'rotate(' + rot + 'deg)' });
 		}
-		$('#animatie+div div.twinkle').animate({
-			opacity: '1',
-		}, 500, function ()
-		{
-			$(this).animate({
-				opacity: '0',
-			}, 500, function ()
+		$('#animatie+div div.twinkle').animate(
 			{
-				$(this).remove();
-			});
-		});
+				opacity: '1',
+			},
+			500,
+			function () {
+				$(this).animate(
+					{
+						opacity: '0',
+					},
+					500,
+					function () {
+						$(this).remove();
+					}
+				);
+			}
+		);
 	}
 	//IENNE END
 });

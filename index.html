@@ -22,9 +22,9 @@
       </div>
       <nav>
         <ul class="main_nav">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#index" class="panel">Home</a></li>
           <li>
-            <a href="jQuery.html">JQuery <a href="#"><i
+            <a href="#jquery" class="panel">JQuery <a href="#"><i
                   class="fas fa-arrow-circle-down arrowIcon dropdownToggle"></i></a></a>
             <ul class="jqueryDropdownList dropdownToggle">
               <li> <a href="#">Basis</a></li>
@@ -35,7 +35,7 @@
               <li> <a href="#">Plugins</a></li>
               <li> <a href="#">Externe data</a></li>
             </ul>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#contact" class="panel">Contact</a></li>
           <li class="searchbar">
             <input type="text" name="search" id="search" placeholder="zoeken..." value="" />
             <a href="#"><i class="fas fa-search search-icon"></i></a>
@@ -44,94 +44,229 @@
       </nav>
     </div>
   </header>
+  <div id="wrapper">
+    <div id="mask">
 
-  <main id="content">
-    <div class="container">
-      <!-- Andreea -->
-      <div class="jquerySliderContainer">
-        <div class="default slider slider7 slick-slide">
-          <img src="img/jquerySlideFrontImg.png" alt="JqueryStandaard" />
-        </div>
-        <div class="basis slider slider7 slick-slide">
+      <div id="index" class="item">
+        <a name="index"></a>
 
-        </div>
-        <div class="events slider slider7 slick-slide">
-          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-        </div>
-        <div class="effecten slider slider7 slick-slide">
-          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-        </div>
-        <div class="jqueryui slider slider7 slick-slide">
-          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-        </div>
-        <div class="animatie slider slider7 slick-slide">
-          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-        </div>
-        <div class="plugins slider slider7 slick-slide">
-          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-        </div>
-        <div class="externedata slider slider7 slick-slide">
-          <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-        </div>
+        <main>
+          <div class="container">
+            <!-- Andreea -->
+            <div class="jquerySliderContainer">
+              <div class="default slider slider7 slick-slide">
+                <img src="img/jquerySlideFrontImg.png" alt="JqueryStandaard" />
+              </div>
+              <div class="basis slider slider7 slick-slide">
+
+              </div>
+              <div class="events slider slider7 slick-slide">
+                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              </div>
+              <div class="effecten slider slider7 slick-slide">
+                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              </div>
+              <div class="jqueryui slider slider7 slick-slide">
+                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              </div>
+              <div class="animatie slider slider7 slick-slide">
+                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              </div>
+              <div class="plugins slider slider7 slick-slide">
+                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              </div>
+              <div class="externedata slider slider7 slick-slide">
+                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              </div>
+            </div>
+            <!-- IENNE -->
+            <div id="tabs">
+              <ul>
+                <li><a href="#over-de-cursus">Over de cursus</a></li>
+                <li><a href="#voor-wie">Voor wie</a></li>
+                <li><a href="#datums">Datums</a></li>
+              </ul>
+              <div id="over-de-cursus">
+                <p>In de cursus leer je:</p>
+                <ul>
+                  <li>
+                    <b>Basisprincipes javascript</b> - variabelen, functies,
+                    strings, arrays,…
+                  </li>
+                  <li><b>Basistechnieken jQuery</b> - implementatie script</li>
+                  <li><b>Selectors</b> - selecteren van elementen op de pagina</li>
+                  <li>
+                    <b>Events</b> - gebeurtenissen opsporen en afhandelen,
+                    bijvoorbeeld een muisklik, pagina inladen,…
+                  </li>
+                  <li><b>Effects</b> - fade, slide, toggle, animate,…</li>
+                  <li>
+                    <b>jQuery UI</b> - gebruikers interactie elementen toevoegen en
+                    instellen
+                  </li>
+                  <li><b>Plugins</b> - een goede plugin zoeken en implementeren</li>
+                  <li>
+                    <b>JSON en AJAX</b> - externe data inlezen en wegschrijven,
+                    zonder een pagina refresh te doen
+                  </li>
+                </ul>
+              </div>
+              <div id="voor-wie">
+                Voor iedereen die vlot met een computer en internet kan werken, HTML
+                kennen is een must samen met een basis aan programmeertechnieken.
+              </div>
+              <div id="datums">
+                <h2>Online cursus</h2>
+                <p>
+                  Onmiddelijk van start na goedkeuring inschrijving.<br />
+                  100% online via
+                  <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br />
+                  Tot 30 juni 2022.<br />
+                  Je kan uitschrijven tot 7 dagen na je toegang tot de cursus.
+                </p>
+                <h2>Opleiding full-stack webdeveloper</h2>
+                <p>
+                  Deze cursus is ook onderdeel van de opleiding
+                  <a href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper"
+                    target="_blank">full-stack
+                    webdeveloper</a>.<br />
+                  Start in september.<br />
+                  50% online, 50% op de campus van CVO De Verdieping.<br />
+                  Tot juni.
+                </p>
+              </div>
+            </div>
+            <!-- IENNE END -->
+          </div>
+        </main>
+
       </div>
-      <div id="tabs">
-        <ul>
-          <li><a href="#over-de-cursus">Over de cursus</a></li>
-          <li><a href="#voor-wie">Voor wie</a></li>
-          <li><a href="#datums">Datums</a></li>
-        </ul>
-        <div id="over-de-cursus">
-          <p>In de cursus leer je:</p>
-          <ul>
-            <li>
-              <b>Basisprincipes javascript</b> - variabelen, functies,
-              strings, arrays,…
-            </li>
-            <li><b>Basistechnieken jQuery</b> - implementatie script</li>
-            <li><b>Selectors</b> - selecteren van elementen op de pagina</li>
-            <li>
-              <b>Events</b> - gebeurtenissen opsporen en afhandelen,
-              bijvoorbeeld een muisklik, pagina inladen,…
-            </li>
-            <li><b>Effects</b> - fade, slide, toggle, animate,…</li>
-            <li>
-              <b>jQuery UI</b> - gebruikers interactie elementen toevoegen en
-              instellen
-            </li>
-            <li><b>Plugins</b> - een goede plugin zoeken en implementeren</li>
-            <li>
-              <b>JSON en AJAX</b> - externe data inlezen en wegschrijven,
-              zonder een pagina refresh te doen
-            </li>
-          </ul>
-        </div>
-        <div id="voor-wie">
-          Voor iedereen die vlot met een computer en internet kan werken, HTML
-          kennen is een must samen met een basis aan programmeertechnieken.
-        </div>
-        <div id="datums">
-          <h2>Online cursus</h2>
-          <p>
-            Onmiddelijk van start na goedkeuring inschrijving.<br />
-            100% online via
-            <a href="https://www.vschool.be/cursus/jquery/" target="_blank">vSchool.</a><br />
-            Tot 30 juni 2022.<br />
-            Je kan uitschrijven tot 7 dagen na je toegang tot de cursus.
-          </p>
-          <h2>Opleiding full-stack webdeveloper</h2>
-          <p>
-            Deze cursus is ook onderdeel van de opleiding
-            <a href="https://www.cvodeverdieping.be/opleidingen/full-stack-webdeveloper" target="_blank">full-stack
-              webdeveloper</a>.<br />
-            Start in september.<br />
-            50% online, 50% op de campus van CVO De Verdieping.<br />
-            Tot juni.
-          </p>
-        </div>
+
+      <div id="jquery" class="item">
+        <a name="jquery"></a>
+
+        <main>
+          <div class="container">
+            <div id="accordion">
+              <h1 id="basis">Basis</h1>
+              <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                  metus,
+                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
+                  viverra
+                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+              </div>
+              <h1 id="events">Events</h1>
+              <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                  metus,
+                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
+                  viverra
+                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+              </div>
+              <h1 id="effecten">Effecten</h1>
+              <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                  metus,
+                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
+                  viverra
+                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+              </div>
+              <h1 id="jquery-ui">jQuery UI</h1>
+              <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                  metus,
+                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
+                  viverra
+                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+              </div>
+              <h1 id="animatie">Animatie</h1>
+              <div>
+                <img src="img/spotlights.png" alt="spotlights">
+                <img src="img/off.png" alt="light switch off">
+                <h1>Met jQuery UI animaties kan je jouw website animeren!</h1>
+              </div>
+              <h1 id="plugins">Plugins</h1>
+              <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                  metus,
+                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
+                  viverra
+                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+              </div>
+              <h1 id="externe-data">Externe data</h1>
+              <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                  metus,
+                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
+                  viverra
+                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </main>
+
       </div>
+
+      <div id="contact" class="item">
+        <a name="contact"></a>
+
+        <main>
+          <div class="container">
+            <div class="grid-contact">
+              <article class="contact-info">
+                <h1>Contact info</h1>
+                <p><b>Telefoon:</b> 04 11 11 11 11</p>
+                <p><b>E-mail:</b> query@mail.com</p>
+                <p><b>adres:</b> Schachtplein 1</p>
+                <p><b>Gemeente:</b> Heusden-zolder</p>
+              </article>
+              <section>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.7170280929263!2d5.326682915752819!3d51.03984687956102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12594d5049df9%3A0xe4e217ce1e2c8c54!2sSchachtplein%201%2C%203550%20Heusden-Zolder!5e0!3m2!1snl!2sbe!4v1644311538701!5m2!1snl!2sbe"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </section>
+            </div>
+            <form id="form" method="post" data-parsley-validate="">
+              <div class="form-grid">
+                <label>
+                  Voornaam:<br> <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required="">
+                </label>
+                <label>
+                  Naam:<br> <input type="text" name="naam" id="naam" placeholder="Naam" required="">
+                </label>
+
+                <label>
+                  E-mail:<br> <input type="email" name="email" id="email" placeholder="E-mail" required="">
+                </label>
+                <label>
+                  Telefoon:<br> <input type="text" name="telefoon" id="telefoon" placeholder="Telefoon" required="">
+                </label>
+              </div>
+
+              <label>
+                Bericht:<br> <textarea name="bericht" id="bericht" cols="100%" rows="7"
+                  placeholder="Vul hier uw bericht in ..." required=""></textarea>
+              </label>
+
+              <input type="submit" id="verzenden" value="Verzenden">
+
+
+            </form>
+          </div>
+        </main>
+
+      </div>
+
     </div>
-  </main>
-
+  </div>
   <footer>
     <div class="socialIcons">
       <a href="https://www.facebook.com/cvodeverdieping"><i class="fab fa-facebook-square"></i></a>
@@ -160,20 +295,20 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script type=" text/javascript " src=" ./js/slick.min.js "></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+  <script src="js/parsley.min.js"></script>
+  <script src="js/nl.js"></script>
 
   <script>
-    $(function ()
-    {
-      if ($('.ui-helper-hidden:first').is(':visible') === true)
-      {
+    $(function () {
+      if ($('.ui-helper-hidden:first').is(':visible') === true) {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });
   </script>
 
   <script>
-    $(document).ready(function ()
-    {
+    $(document).ready(function () {
       $(".jquerySliderContainer ").slick({
         infinite: true,
         slidesToShow: 1,
@@ -183,14 +318,12 @@
       });
 
 
-      $('.dropdownToggle').hover(function ()
-      {
+      $('.dropdownToggle').hover(function () {
         $('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
       });
 
 
-      $('.jqueryDropdownList li').click(function ()
-      {
+      $('.jqueryDropdownList li').click(function () {
         TrailerIndex = $(this).index() + 1;
         $(".jquerySliderContainer").slick('slickGoTo', parseInt(TrailerIndex), false);
       });
