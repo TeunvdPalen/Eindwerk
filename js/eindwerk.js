@@ -297,8 +297,7 @@ $(document).ready(function ()
  $(".jquerySliderContainer ").slick({
 	infinite: true,
 	slidesToShow: 1,
-	adaptiveHeight: true,
-	lazyLoad: 'ondemand',
+	arrows: false,
 	slidesToScroll: 1
   });
 
@@ -316,7 +315,7 @@ $(document).ready(function ()
   //animatie van de text op de home slide
   setTimeout(function () {
 	$('.textAnimation').removeClass('hidden');
-  }, 500);
+  }, 1000);
 
   //background icons
   $('.backgroundContainer').load("background.html");
