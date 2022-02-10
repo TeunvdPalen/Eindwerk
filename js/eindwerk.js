@@ -217,4 +217,37 @@ $(document).ready(function () {
 		);
 	}
 	//IENNE END
+
+
+
+ // Begin code Andreea
+
+ // slider carouser
+ $(".jquerySliderContainer ").slick({
+	infinite: true,
+	slidesToShow: 1,
+	adaptiveHeight: true,
+	lazyLoad: 'ondemand',
+	slidesToScroll: 1
+  });
+
+  //dropdown menu 
+  $('.dropdownToggle').hover(function () {
+	$('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
+  });
+
+  // link van de dropdown menu met slick slider
+  $('.jqueryDropdownList li').click(function () {
+	TrailerIndex = $(this).index() + 1;
+	$(".jquerySliderContainer").slick('slickGoTo', parseInt(TrailerIndex), false);
+  });
+
+  //animatie van de text op de home slide
+  setTimeout(function () {
+	$('.textAnimation').removeClass('hidden');
+  }, 500);
+
+  //background icons
+  $('.backgroundContainer').load("background.html");
+
 });
