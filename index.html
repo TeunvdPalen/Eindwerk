@@ -237,23 +237,27 @@
             <form id="form" method="post" data-parsley-validate="">
               <div class="form-grid">
                 <label>
-                  Voornaam:<br> <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required="">
+                  Voornaam:<br> <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required=""
+                    data-parsley-length="[2,20]" data-parsley-pattern="^[a-zA-Z]+$">
                 </label>
                 <label>
-                  Naam:<br> <input type="text" name="naam" id="naam" placeholder="Naam" required="">
+                  Naam:<br> <input type="text" name="naam" id="naam" placeholder="Naam" required=""
+                    data-parsley-length="[2,20]" data-parsley-pattern="^[a-zA-Z]+$">
                 </label>
 
                 <label>
                   E-mail:<br> <input type="email" name="email" id="email" placeholder="E-mail" required="">
                 </label>
                 <label>
-                  Telefoon:<br> <input type="text" name="telefoon" id="telefoon" placeholder="Telefoon" required="">
+                  Telefoon:<br> <input type="text" name="telefoon" id="telefoon" placeholder="Telefoon" required=""
+                    data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$"
+                    data-parsley-pattern-message="Enkel nummers is toegestaan" data-parsley-length="[8,13]">
                 </label>
               </div>
 
               <label>
                 Bericht:<br> <textarea name="bericht" id="bericht" cols="100%" rows="7"
-                  placeholder="Vul hier uw bericht in ..." required=""></textarea>
+                  placeholder="Vul hier uw bericht in ..." required="" data-parsley-length="[10,500]"></textarea>
               </label>
 
               <input type="submit" id="verzenden" value="Verzenden">
