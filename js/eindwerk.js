@@ -42,7 +42,7 @@ $(document).ready(function () {
 	// --SEARCH
 	let open = false;
 	let $inputSearch = $('input[type=text]#search');
-	let $icon = $('a .fa-search');
+	let $icon = $('header .searchbar a');
 	let averageSpeed = 600;
 	let speed = 900;
 
