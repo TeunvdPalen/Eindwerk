@@ -11,9 +11,7 @@ $(document).ready(function () {
 	$('#upload').change(function () {
 		const $file = this.files[0];
 		let i = $(this).prev('label').clone();
-		console.log(i);
-		let $fileName = $file.name;
-		$(this).prev('label').text($fileName);
+		$(this).prev('label').text($file.name);
 		console.log($file);
 		if ($file) {
 			let reader = new FileReader();
@@ -42,39 +40,30 @@ $(document).ready(function () {
 	// Index pagina inladen met andere paginas
 
 	$('a.panel').click(function () {
-		//reset and highlight the clicked link
-		// $('a.panel').removeClass('selected');
-		// $(this).addClass('selected');
-
-		//grab the current item, to be used in resize function
+		//select huidig item
 		current = $(this);
 
-		//scroll it to the destination
+		//scroll naar item
 		$('#wrapper').scrollTo($(this).attr('href'), 800);
 
-		//cancel the link default behavior
+		//cancel link default behavior
 		return false;
 	});
 
-	//resize all the items according to the new browser size
+	//resize de items naar de nieuwe browser size
 	$(window).resize(function () {
-		//call the resizePanel function
 		resizePanel();
 	});
 
 	function resizePanel() {
-		//get the browser width and height
 		width = $(window).width();
 		height = $(window).height();
 
-		//get the mask width: width * total of items
 		mask_width = width * $('.item').length;
 
-		//set the dimension
 		$('#wrapper, .item').css({ width: width, height: height });
 		$('#mask').css({ width: mask_width, height: height });
 
-		//if the item is displayed incorrectly, set it to the corrent pos
 		$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
 	}
 
