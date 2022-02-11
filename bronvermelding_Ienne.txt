@@ -1,11 +1,9 @@
-ZOEKBALK
-https://api.jqueryui.com/autocomplete/
-https://www.tutorialspoint.com/jqueryui/jqueryui_autocomplete.htm
-https://api.jquery.com/keypress/
+jQuery API en jQuiry UI API
 
+ZOEKBALK
+https://www.tutorialspoint.com/jqueryui/jqueryui_autocomplete.htm
 
 ANIMATIES
-https://api.jquery.com/hover/
 https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 https://stackoverflow.com/questions/8539079/how-to-start-and-stop-pause-setinterval
 https://stackoverflow.com/questions/42855374/random-position-of-elements-inside-parent-div
@@ -13,13 +11,6 @@ https://bennettfeely.com/clippy/
 
 EVENTS
 https://stackoverflow.com/questions/13637223/how-do-you-make-a-div-tabbable
-
-SLIDE
-https://www.queness.com/post/356/create-a-vertical-horizontal-and-diagonal-sliding-content-website-with-jquery
-https://github.com/flesler/jquery.scrollTo
-
-FORM validatie
-http://parsleyjs.org/doc/index.html
 
 FOOTER
 https://codeontrack.com/keep-footer-bottom-page-jquery/
