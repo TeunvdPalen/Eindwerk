@@ -381,6 +381,15 @@ footer {
 }
 
 /*------------------TABS-----------------------------*/
+
+#tabs {
+  margin-top: 50px;
+}
+
+ul.ui-tabs-nav {
+  padding: 0 !important;
+}
+
 .ui-widget-header {
   background: none !important;
   border: none !important;
@@ -393,7 +402,7 @@ footer {
 }
 
 .ui-tabs .ui-tabs-nav li {
-  margin: 0 !important;
+  margin: 0 1.65px !important;
   border: none !important;
   height: 50px;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 53% 80%, 50% 80%, 47% 80%, 0 80%);
@@ -531,6 +540,8 @@ form {
 
 #events+div h1 {
   text-align: center;
+  z-index: 2;
+  margin-bottom: 180px;
 }
 
 #events+div {
@@ -538,23 +549,25 @@ form {
 }
 
 #events+div .player {
-  width: 50px;
-  height: 50px;
-  background: red;
+  width: 200px;
+  height: 155px;
+  background: rgba(8, 104, 172, 0.5);
   position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
+  bottom: 0;
+  left: 400px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  z-index: 0;
+  text-align: center;
 }
 
 #events+div .player:focus {
-  width: 50px;
-  height: 50px;
-  background: green;
-  border: 1px solid #161616;
+  background: var(--color-highlight);
   position: absolute;
-  top: 0;
-  left: 0;
+  outline: none;
 }
 
 /*------------------------------*/

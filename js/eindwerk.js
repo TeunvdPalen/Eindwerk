@@ -80,7 +80,7 @@ $(document).ready(function ()
 
 	// Einde code Teun
 
-	//IENNE
+	//CODE IENNE
 
 	// --TABS
 	$('#tabs').tabs({
@@ -145,9 +145,7 @@ $(document).ready(function ()
 		{
 			Search();
 		}
-	});
-
-	$inputSearch.autocomplete({
+	}).autocomplete({
 		source: autocomplete,
 		autoFocus: true,
 		delay: 600,
@@ -172,7 +170,6 @@ $(document).ready(function ()
 							else if (tool == '#tabs') $(tool).tabs('option', 'active', parseInt(idx));
 						});
 					}
-					//NORMAAL
 					else $('#wrapper').scrollTo(links[i], 800);
 
 					CloseSearch();
@@ -260,41 +257,24 @@ $(document).ready(function ()
 		);
 	}
 
-
-
 	// --EVENTS
-	$('#events+div .player').on("keydown", function (e)
+	$('#events+div .player').on("focus", function ()
 	{
-
-		$('#events+div .player').on("focus", function ()
-		{
-			window.addEventListener("keydown", function (e)
-			{
-				if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1)
-				{
-					e.preventDefault();
-				}
-			}, false);
-		});
-		//console.log("click: " + e.which);
-
+		$(this).text("gebruik de linker en rechter pijltjestoetsen om mij te bewegen")
+	}).on("focusout", function ()
+	{
+		$(this).text("Klik op mij!")
+	}).on("keydown", function (e)
+	{
 		switch (e.which)
 		{
-			// 38 = arrow up
-			case 38:
-				$(this).animate({ top: '-=1' }, 0);
-				break;
-			// 40 = arrow down
-			case 40:
-				$(this).animate({ top: '+=1' }, 0);
-				break;
 			// 37 = arrow left
 			case 37:
-				$(this).animate({ left: '-=1' }, 0);
+				$(this).animate({ left: '-=2' }, 0);
 				break;
 			// 39 = arrow right
 			case 39:
-				$(this).animate({ left: '+=1' }, 0);
+				$(this).animate({ left: '+=2' }, 0);
 				break;
 			default:
 				break;
@@ -312,8 +292,9 @@ $(document).ready(function ()
 	{
 		$('footer').addClass('stayDown');
 	}
+	//CODE IENNE END
 
-	//IENNE END
+
 
 	// Begin code Andreea
 
@@ -346,9 +327,6 @@ $(document).ready(function ()
 
 	//background icons
 	$('.backgroundContainer').load("background.html");
-	$('.backgroundContainer').css({ 'top': $('header').height() });
-	$('main').css({ 'margin-bottom': $('footer').height() });
-
-	//background icons
-	$('.backgroundContainer').load('background.html');
+	$('.backgroundContainer').css({ 'top': $('header').height() }); // CODE LINE IENNE
+	$('main').css({ 'margin-bottom': $('footer').height() }); // CODE LINE IENNE 
 });
