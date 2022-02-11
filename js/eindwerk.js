@@ -323,9 +323,11 @@ $(document).ready(function () {
 	}
 	//EINDE CODE IENNE
 
+
+
 	// Begin code Andreea
 
-	// slider carouser
+	// slider carousel
 	$('.jquerySliderContainer ').slick({
 		infinite: true,
 		slidesToShow: 1,
@@ -333,45 +335,27 @@ $(document).ready(function () {
 		slidesToScroll: 1
 	});
 
-	//dropdown menu
-	$('.dropdownToggle').hover(function () {
-		$('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
-	});
-
-	// link van de dropdown menu met slick slider
-	$('.jqueryDropdownList li').click(function () {
-		TrailerIndex = $(this).index() + 1;
-		$('.jquerySliderContainer').slick('slickGoTo', parseInt(TrailerIndex), false);
-	});
-
-	//animatie van de text op de home slide
-	setTimeout(function () {
-		$('.textAnimation').removeClass('hidden');
-	}, 1000);
-
-	//background icons
+	//background icons in de background.html
 	$('div.backgroundContainer').load('background.html');
 	$('div.backgroundContainer')
 		.css({ top: $('header').height() })
 		.height($('main #wrapper').height()); // CODE LINE IENNE
 	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE
 
-	//basis demo
+	//basis in de accordeon
 	$(".demo1p1").on("click", function () {
 		$(this).hide();
-
-
 	});
 
 	$("button").on("click", function () {
 		$(".demo1p2").hide();
-
 	});
 
 	$("#home").on("click", function () {
 		$(".jquerySliderContainer").slick('slickGoTo', 0, false);
 	});
 
+	// plugin code in de accordeon
 	$('#tooltip1').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'fade',
@@ -402,7 +386,7 @@ $(document).ready(function () {
 		trigger: 'hover'
 	});
 
-
+	//  effecten code in de accordeon
 	$(".fadetoggle").on("click", function () {
 		$(".div1").fadeToggle();
 		$(".div2").fadeToggle("slow");

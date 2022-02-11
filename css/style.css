@@ -33,7 +33,6 @@ main {
 .interactiveBackground {
 	position: fixed;
 	width: 100%;
-	height: 100vh;
 	background: white;
 	display: flex;
 	flex-direction: column;
@@ -205,57 +204,6 @@ nav ul li a {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-}
-
-.textAnimation {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-}
-
-.textAnimation li {
-	list-style: none;
-	display: inline-block;
-	margin-right: 5px;
-	font-weight: 300;
-	font-size: 5em;
-	color: var(--color-highlight);
-	opacity: 1;
-	transition: all 2.5s ease;
-	z-index: 20;
-}
-
-.textAnimation li:last-child {
-	margin-right: 0;
-}
-
-.textAnimation .hidden {
-	opacity: 0;
-}
-
-.textAnimation .hidden li:nth-child(1) {
-	transform: translateX(-200px) translateY(-200);
-}
-
-.textAnimation .hidden li:nth-child(2) {
-	transform: translateX(20px) translateY(100);
-}
-
-.textAnimation .hidden li:nth-child(3) {
-	transform: translateX(-150) translateY(-80);
-}
-
-.textAnimation .hidden li:nth-child(4) {
-	transform: translateX(10) translateY(-200);
-}
-
-.textAnimation .hidden li:nth-child(5) {
-	transform: translateX(-300px) translateY(200);
-}
-
-.textAnimation .hidden li:nth-child(6) {
-	transform: translateX(20px) translateY(-20);
 }
 
 /*search*/
@@ -753,7 +701,7 @@ textarea.parsley-error {
 	background-color: #aa189e;
 }
 
-/* plugins */
+/* plugins in accordeon */
 
 .tooltipLayout{
 	padding: 30px;
@@ -766,7 +714,7 @@ textarea.parsley-error {
 	justify-content: center;
 }
 
-/* effecten */
+/* effecten in accordeon*/
 
 .div1{
 	background-color: #3e4756;
