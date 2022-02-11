@@ -31,7 +31,7 @@ $(document).ready(function ()
 	// Formulier validatie
 	$(function ()
 	{
-		/*$('#demo-form')
+		$('#demo-form')
 			.parsley()
 			.on('field:validated', function ()
 			{
@@ -42,7 +42,7 @@ $(document).ready(function ()
 			.on('form:submit', function ()
 			{
 				return false; // Don't submit form for this demo
-			});*/
+			});
 	});
 
 	// Index pagina inladen met andere paginas
@@ -326,7 +326,7 @@ $(document).ready(function ()
 	}, 1000);
 
 	//background icons
-	$('.backgroundContainer').load("background.html");
-	$('.backgroundContainer').css({ 'top': $('header').height() }); // CODE LINE IENNE
-	$('main').css({ 'margin-bottom': $('footer').height() }); // CODE LINE IENNE 
+	$('div.backgroundContainer').load("background.html");
+	$('div.backgroundContainer').css({ 'top': $('header').height() }).height($('main #wrapper').height()); // CODE LINE IENNE
+	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE 
 });
