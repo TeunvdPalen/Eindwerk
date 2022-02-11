@@ -80,19 +80,21 @@ main {
 }
 
 @keyframes animate3 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0%);
   }
 
   50% {
     transform: translateX(15%);
   }
-
-
 }
 
 @keyframes animate4 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0%);
   }
 
@@ -673,5 +675,20 @@ textarea.parsley-error {
 
 /*-------------- EXTERNE DATA ------------------*/
 #externe-data+div h2 {
+  text-align: center;
+}
+
+/* ---------- Jquery UI ----------- */
+
+.jqueryui-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sleepbaar {
+  background-color: var(--color-primary);
+  color: white;
+  margin: 0;
+  width: 125px;
   text-align: center;
 }

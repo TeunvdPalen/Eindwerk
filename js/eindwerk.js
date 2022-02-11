@@ -78,6 +78,15 @@ $(document).ready(function ()
 		$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
 	}
 
+	// jQuery UI
+
+	// Sleepbaar vakjes
+	$('#sleepbaar').draggable();
+	$('#sleepbaar2').draggable({ axis: 'y' });
+	$('#sleepbaar3').draggable({ axis: 'x' });
+
+	//
+
 	// Einde code Teun
 
 	//CODE IENNE
@@ -138,18 +147,20 @@ $(document).ready(function ()
 		}
 	});
 
-	$inputSearch.on('keypress', function (e)
-	{
-		// 13 is the ENTER key
-		if (e.which == 13)
+	$inputSearch
+		.on('keypress', function (e)
 		{
-			Search();
-		}
-	}).autocomplete({
-		source: autocomplete,
-		autoFocus: true,
-		delay: 600,
-	});
+			// 13 is the ENTER key
+			if (e.which == 13)
+			{
+				Search();
+			}
+		})
+		.autocomplete({
+			source: autocomplete,
+			autoFocus: true,
+			delay: 600,
+		});
 
 	function Search()
 	{
@@ -169,8 +180,7 @@ $(document).ready(function ()
 							if (tool == '#accordion') $(tool).accordion('option', 'active', parseInt(idx));
 							else if (tool == '#tabs') $(tool).tabs('option', 'active', parseInt(idx));
 						});
-					}
-					else $('#wrapper').scrollTo(links[i], 800);
+					} else $('#wrapper').scrollTo(links[i], 800);
 
 					CloseSearch();
 				}
@@ -258,30 +268,31 @@ $(document).ready(function ()
 	}
 
 	// --EVENTS
-	$('#events+div .player').on("focus", function ()
-	{
-		$(this).text("gebruik de linker en rechter pijltjestoetsen om mij te bewegen")
-	}).on("focusout", function ()
-	{
-		$(this).text("Klik op mij!")
-	}).on("keydown", function (e)
-	{
-		switch (e.which)
+	$('#events+div .player')
+		.on('focus', function ()
 		{
-			// 37 = arrow left
-			case 37:
-				$(this).animate({ left: '-=2' }, 0);
-				break;
-			// 39 = arrow right
-			case 39:
-				$(this).animate({ left: '+=2' }, 0);
-				break;
-			default:
-				break;
-		}
-
-	});
-
+			$(this).text('gebruik de linker en rechter pijltjestoetsen om mij te bewegen');
+		})
+		.on('focusout', function ()
+		{
+			$(this).text('Klik op mij!');
+		})
+		.on('keydown', function (e)
+		{
+			switch (e.which)
+			{
+				// 37 = arrow left
+				case 37:
+					$(this).animate({ left: '-=2' }, 0);
+					break;
+				// 39 = arrow right
+				case 39:
+					$(this).animate({ left: '+=2' }, 0);
+					break;
+				default:
+					break;
+			}
+		});
 
 	// --FOOTER
 	$('footer').removeClass('stayDown');
@@ -293,8 +304,6 @@ $(document).ready(function ()
 		$('footer').addClass('stayDown');
 	}
 	//CODE IENNE END
-
-
 
 	// Begin code Andreea
 
@@ -327,6 +336,4 @@ $(document).ready(function ()
 
 	//background icons
 	$('.backgroundContainer').load("background.html");
-	//$('.backgroundContainer').css({ 'top': $('header').height() }).height($('#wrapper').height()); // CODE LINE IENNE
-	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE 
 });
