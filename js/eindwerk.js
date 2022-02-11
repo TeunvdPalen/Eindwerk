@@ -31,7 +31,7 @@ $(document).ready(function ()
 	// Formulier validatie
 	$(function ()
 	{
-		$('#demo-form')
+		$('#form')
 			.parsley()
 			.on('field:validated', function ()
 			{
@@ -326,7 +326,7 @@ $(document).ready(function ()
 	}, 1000);
 
 	//background icons
-	$('div.backgroundContainer').load("background.html");
-	$('div.backgroundContainer').css({ 'top': $('header').height() }).height($('main #wrapper').height()); // CODE LINE IENNE
+	$('.backgroundContainer').load("background.html");
+	//$('.backgroundContainer').css({ 'top': $('header').height() }).height($('#wrapper').height()); // CODE LINE IENNE
 	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE 
 });
