@@ -332,14 +332,14 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 1,
 		arrows: true,
-		slidesToScroll: 1
+		slidesToScroll: 1,
 	});
 
 	//background icons in de background.html
 	$('div.backgroundContainer').load('background.html');
-	$('div.backgroundContainer')
-		.css({ top: $('header').height() })
-		.height($('main #wrapper').height()); // CODE LINE IENNE
+	$('div.backgroundContainer');
+	// .css({ top: $('header').height() });
+	// .height($('main #wrapper').height()); // CODE LINE IENNE
 	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE
 
 	//basis in de accordeon
@@ -351,39 +351,39 @@ $(document).ready(function () {
 		$(".demo1p2").hide();
 	});
 
-	$("#home").on("click", function () {
-		$(".jquerySliderContainer").slick('slickGoTo', 0, false);
+	$('#home').on('click', function () {
+		$('.jquerySliderContainer').slick('slickGoTo', 0, false);
 	});
 
 	// plugin code in de accordeon
 	$('#tooltip1').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'fade',
-		trigger: 'hover'
+		trigger: 'hover',
 	});
 
 	$('#tooltip2').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'grow',
-		trigger: 'click'
+		trigger: 'click',
 	});
 
 	$('#tooltip3').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'swing',
-		trigger: 'hover'
+		trigger: 'hover',
 	});
 
 	$('#tooltip4').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'slide',
-		trigger: 'click'
+		trigger: 'click',
 	});
 
 	$('#tooltip5').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'fall',
-		trigger: 'hover'
+		trigger: 'hover',
 	});
 
 	//  effecten code in de accordeon
@@ -392,10 +392,4 @@ $(document).ready(function () {
 		$(".div2").fadeToggle("slow");
 		$(".div3").fadeToggle(3000);
 	});
-
-
 });
-
-
-
-
