@@ -19,14 +19,8 @@ body {
 }
 
 main {
-	/*padding: 3rem 0;*/
-	/*margin-bottom: 150px;*/
-}
-
-.backgroundContainer {
-	position: absolute;
-	width: 100%;
-	z-index: 0;
+	padding: 3rem 0;
+	margin-bottom: 150px;
 }
 
 /* --------------- LOADED BACKGROUND FROM BACKGROUND.HTML CSS --------*/
@@ -37,7 +31,7 @@ main {
 }
 
 .interactiveBackground {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100vh;
 	background: white;
@@ -45,7 +39,8 @@ main {
 	flex-direction: column;
 	overflow: hidden;
 	display: table-cell;
-	z-index: -100;
+	top: 0;
+	z-index: 0;
 }
 
 .interactiveBackground .row {
@@ -109,6 +104,8 @@ main {
 /* ------------------------ HEADER CSS ---------------------- */
 header {
 	background-color: var(--color-primary);
+	position: relative;
+	z-index: 1;
 }
 
 header .container {
@@ -322,6 +319,8 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 60px 0;
+	position: relative;
+	z-index: 1;
 }
 
 .justifyContainer {

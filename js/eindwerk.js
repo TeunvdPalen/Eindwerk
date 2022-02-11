@@ -134,7 +134,7 @@ $(document).ready(function () {
 	}
 	// Einde code Teun
 
-	//CODE IENNE
+	//BEGIN CODE IENNE
 
 	// --TABS
 	$('#tabs').tabs({
@@ -244,7 +244,7 @@ $(document).ready(function () {
 	// ANIMATIONS
 	let twinkling = null;
 	let $animDiv = $('#animatie + div');
-	//let $animImg = $('#animatie + div.ui-accordion-content-active img'); werkt niet?
+	//let $animImg = $('#animatie + div.ui-accordion-content-active img'); not working?
 
 	$animDiv.hover(
 		function () {
@@ -321,7 +321,7 @@ $(document).ready(function () {
 	if (difference > 0) {
 		$('footer').addClass('stayDown');
 	}
-	//CODE IENNE END
+	//EINDE CODE IENNE
 
 	// Begin code Andreea
 
@@ -350,9 +350,5 @@ $(document).ready(function () {
 	}, 1000);
 
 	//background icons
-	$('div.backgroundContainer').load('background.html');
-	$('div.backgroundContainer')
-		.css({ top: $('header').height() })
-		.height($('main #wrapper').height()); // CODE LINE IENNE
-	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE
+	$('.backgroundContainer').load('background.html');
 });

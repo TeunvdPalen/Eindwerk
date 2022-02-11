@@ -1,0 +1,6 @@
+SLIDE
+https://www.queness.com/post/356/create-a-vertical-horizontal-and-diagonal-sliding-content-website-with-jquery
+https://github.com/flesler/jquery.scrollTo
+
+FORM validatie
+http://parsleyjs.org/doc/index.html
