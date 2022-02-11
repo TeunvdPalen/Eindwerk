@@ -1,9 +1,8 @@
-$(document).ready(function () {
+$(document).ready(function ()
+{
 	// Begin code Teun
 	// accordion jquery pagina
-	let $accordion = $('#accordion');
-
-	$accordion.accordion({
+	$('#accordion').accordion({
 		collapsible: true,
 		active: false,
 		icons: { header: 'ui-icon-plus', activeHeader: 'ui-icon-minus' },
@@ -11,14 +10,17 @@ $(document).ready(function () {
 	});
 
 	// Externe afbeelding uploaden en tonen
-	$('#upload').change(function () {
+	$('#upload').change(function ()
+	{
 		const $file = this.files[0];
 		let i = $(this).prev('label').clone();
 		$(this).prev('label').text($file.name);
 		console.log($file);
-		if ($file) {
+		if ($file)
+		{
 			let reader = new FileReader();
-			reader.onload = function (event) {
+			reader.onload = function (event)
+			{
 				console.log(event.target.result);
 				$('#imgPreview').attr('src', event.target.result).show();
 			};
@@ -27,7 +29,8 @@ $(document).ready(function () {
 	});
 
 	// Formulier validatie
-	$(function () {
+	$(function ()
+	{
 		/*$('#demo-form')
 			.parsley()
 			.on('field:validated', function ()
@@ -44,7 +47,8 @@ $(document).ready(function () {
 
 	// Index pagina inladen met andere paginas
 
-	$('a.panel').click(function () {
+	$('a.panel').click(function ()
+	{
 		//select huidig item
 		current = $(this);
 
@@ -56,11 +60,13 @@ $(document).ready(function () {
 	});
 
 	//resize de items naar de nieuwe browser size
-	$(window).resize(function () {
+	$(window).resize(function ()
+	{
 		resizePanel();
 	});
 
-	function resizePanel() {
+	function resizePanel()
+	{
 		width = $(window).width();
 		height = $(window).height();
 
@@ -77,7 +83,6 @@ $(document).ready(function () {
 	//IENNE
 
 	// --TABS
-	let $tabs = $('#tabs');
 	$('#tabs').tabs({
 		active: 0,
 		show: { effect: 'blind', duration: 250 },
@@ -109,12 +114,15 @@ $(document).ready(function () {
 		'#index #tabs 0',
 	];
 
-	$('.fa-search').on('click', function () {
-		if (!open) {
+	$('.fa-search').on('click', function ()
+	{
+		if (!open)
+		{
 			open = true;
 			speed = ((150 - $inputSearch.width()) / 100) * averageSpeed;
 
-			$icon.addClass('search-icon-active', 100, function () {
+			$icon.addClass('search-icon-active', 100, function ()
+			{
 				$inputSearch.stop().show().animate(
 					{
 						width: '150px',
@@ -123,15 +131,18 @@ $(document).ready(function () {
 					speed
 				);
 			});
-		} else {
+		} else
+		{
 			Search();
 			if ($inputSearch.val() == '') CloseSearch();
 		}
 	});
 
-	$inputSearch.on('keypress', function (e) {
+	$inputSearch.on('keypress', function (e)
+	{
 		// 13 is the ENTER key
-		if (e.which == 13) {
+		if (e.which == 13)
+		{
 			Search();
 		}
 	});
@@ -142,15 +153,21 @@ $(document).ready(function () {
 		delay: 600,
 	});
 
-	function Search() {
-		if ($inputSearch.val() != '') {
-			for (let i = 0; i < autocomplete.length; ++i) {
-				if ($inputSearch.val() == autocomplete[i]) {
-					if (links[i].includes(' ')) {
+	function Search()
+	{
+		if ($inputSearch.val() != '')
+		{
+			for (let i = 0; i < autocomplete.length; ++i)
+			{
+				if ($inputSearch.val() == autocomplete[i])
+				{
+					if (links[i].includes(' '))
+					{
 						let page = links[i].substring(0, links[i].indexOf(' '));
 						let tool = links[i].substring(links[i].indexOf(' ') + 1, links[i].lastIndexOf(' '));
 						let idx = links[i].substring(links[i].lastIndexOf(' ') + 1, links[i].length);
-						$('#wrapper').scrollTo(page, 800, function () {
+						$('#wrapper').scrollTo(page, 800, function ()
+						{
 							if (tool == '#accordion') $(tool).accordion('option', 'active', parseInt(idx));
 							else if (tool == '#tabs') $(tool).tabs('option', 'active', parseInt(idx));
 						});
@@ -164,8 +181,10 @@ $(document).ready(function () {
 		}
 	}
 
-	function CloseSearch() {
-		if (open) {
+	function CloseSearch()
+	{
+		if (open)
+		{
 			speed = ($inputSearch.width() / 100) * averageSpeed;
 
 			$inputSearch.stop().animate(
@@ -174,7 +193,8 @@ $(document).ready(function () {
 					padding: '0',
 				},
 				speed,
-				function () {
+				function ()
+				{
 					$inputSearch.hide().val('');
 					$icon.removeClass('search-icon-active', 100);
 				}
@@ -190,23 +210,28 @@ $(document).ready(function () {
 	//let $animImg = $('#animatie + div.ui-accordion-content-active img'); werkt niet?
 
 	$animDiv.hover(
-		function () {
+		function ()
+		{
 			$('#animatie + div.ui-accordion-content-active img')
 				.stop()
-				.animate({ opacity: '1' }, 1500, 'easeInElastic', function () {
+				.animate({ opacity: '1' }, 1500, 'easeInElastic', function ()
+				{
 					twinkling = setInterval(Twinkle, 500);
 				});
 		},
-		function () {
+		function ()
+		{
 			clearInterval(twinkling);
 			$('#animatie + div.ui-accordion-content-active img').stop().animate({ opacity: '0' }, 1500, 'easeInElastic');
 		}
 	);
 
-	function Twinkle() {
+	function Twinkle()
+	{
 		let amount = Math.floor(Math.random() * 20) + 2;
 
-		for (let i = 0; i < amount; ++i) {
+		for (let i = 0; i < amount; ++i)
+		{
 			let size = Math.floor(Math.random() * 25);
 			let left = Math.random() * ($animDiv.width() - size * 2);
 			let top = Math.random() * ($animDiv.height() - size * 2);
@@ -219,13 +244,15 @@ $(document).ready(function () {
 				opacity: '1',
 			},
 			500,
-			function () {
+			function ()
+			{
 				$(this).animate(
 					{
 						opacity: '0',
 					},
 					500,
-					function () {
+					function ()
+					{
 						$(this).remove();
 					}
 				);
@@ -233,13 +260,56 @@ $(document).ready(function () {
 		);
 	}
 
+
+
+	// --EVENTS
+	$('#events+div .player').on("keydown", function (e)
+	{
+
+		$('#events+div .player').on("focus", function ()
+		{
+			window.addEventListener("keydown", function (e)
+			{
+				if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1)
+				{
+					e.preventDefault();
+				}
+			}, false);
+		});
+		//console.log("click: " + e.which);
+
+		switch (e.which)
+		{
+			// 38 = arrow up
+			case 38:
+				$(this).animate({ top: '-=1' }, 0);
+				break;
+			// 40 = arrow down
+			case 40:
+				$(this).animate({ top: '+=1' }, 0);
+				break;
+			// 37 = arrow left
+			case 37:
+				$(this).animate({ left: '-=1' }, 0);
+				break;
+			// 39 = arrow right
+			case 39:
+				$(this).animate({ left: '+=1' }, 0);
+				break;
+			default:
+				break;
+		}
+
+	});
+
+
 	// --FOOTER
 	$('footer').removeClass('stayDown');
 	let $window = $(window).height();
 	let $page = $('body').height();
 	let difference = $window - $page;
-	console.log(difference);
-	if (difference > 0) {
+	if (difference > 0)
+	{
 		$('footer').addClass('stayDown');
 	}
 
@@ -256,20 +326,28 @@ $(document).ready(function () {
 	});
 
 	//dropdown menu
-	$('.dropdownToggle').hover(function () {
+	$('.dropdownToggle').hover(function ()
+	{
 		$('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
 	});
 
 	// link van de dropdown menu met slick slider
-	$('.jqueryDropdownList li').click(function () {
+	$('.jqueryDropdownList li').click(function ()
+	{
 		TrailerIndex = $(this).index() + 1;
 		$('.jquerySliderContainer').slick('slickGoTo', parseInt(TrailerIndex), false);
 	});
 
 	//animatie van de text op de home slide
-	setTimeout(function () {
+	setTimeout(function ()
+	{
 		$('.textAnimation').removeClass('hidden');
 	}, 1000);
+
+	//background icons
+	$('.backgroundContainer').load("background.html");
+	$('.backgroundContainer').css({ 'top': $('header').height() });
+	$('main').css({ 'margin-bottom': $('footer').height() });
 
 	//background icons
 	$('.backgroundContainer').load('background.html');
