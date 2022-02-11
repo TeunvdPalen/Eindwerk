@@ -505,7 +505,7 @@ form {
   text-align: center;
 }
 
-#animatie+div.ui-accordion-content-active h1 {
+#animatie+div.ui-accordion-content-active h2 {
   margin-top: 150px;
 }
 
@@ -538,7 +538,7 @@ form {
 
 /*------------------EVENTS-----------------------------*/
 
-#events+div h1 {
+#events+div h2 {
   text-align: center;
   z-index: 2;
   margin-bottom: 180px;
@@ -649,3 +649,9 @@ textarea.parsley-error {
 }
 
 /* Einde slide animatie */
+
+
+/*-------------- EXTERNE DATA ------------------*/
+#externe-data+div h2 {
+  text-align: center;
+}
