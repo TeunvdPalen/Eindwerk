@@ -679,3 +679,18 @@ textarea.parsley-error {
 #externe-data + div h2 {
 	text-align: center;
 }
+
+/* ---------- Jquery UI ----------- */
+
+.jqueryui-flex {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.sleepbaar {
+	background-color: var(--color-primary);
+	color: white;
+	margin: 0;
+	width: 125px;
+	text-align: center;
+}
