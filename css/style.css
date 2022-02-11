@@ -492,6 +492,10 @@ textarea#bericht {
 	padding: 7px 10px;
 }
 
+textarea#bericht {
+	resize: none;
+}
+
 #verzenden {
 	margin: 2rem 15rem 0;
 	padding: 1rem 0;
