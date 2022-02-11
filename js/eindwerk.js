@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 	// Formulier validatie
 	$(function () {
-		$('#demo-form')
+		$('#form')
 			.parsley()
 			.on('field:validated', function () {
 				var ok = $('.parsley-error').length === 0;
