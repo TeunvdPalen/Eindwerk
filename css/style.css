@@ -68,7 +68,7 @@ main {
 	text-shadow: 0 0 120px var(--color-highlight);
 }
 
-/* .interactiveBackground .row:nth-child(even) div {
+.interactiveBackground .row:nth-child(even) div {
 	animation: animate3 80s linear infinite;
 	animation-delay: 0s;
 }
@@ -98,7 +98,7 @@ main {
 	50% {
 		transform: translateX(15%);
 	}
-} */
+}
 
 /* ------------------------ HEADER CSS ---------------------- */
 header {

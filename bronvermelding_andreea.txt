@@ -1,0 +1,21 @@
+https://github.com/TeunvdPalen/Eindwerk
+
+Voor de slick slider plugin:
+https://kenwheeler.github.io/slick/
+https://github.com/kenwheeler/slick/
+https://github.com/kenwheeler/slick/blob/master/README.markdown
+
+Voor de content:
+https://www.queness.com/post/356/create-a-vertical-horizontal-and-diagonal-sliding-content-website-with-jquery
+
+Voor de letters met animatie:
+https://www.jqueryscript.net/animation/Airport-Text-Shuffle-Animation.html
+
+voor de plugin van de tooltips
+http://calebjacob.github.io/tooltipster/
+https://github.com/calebjacob/tooltipster/tree/master/src/css
+
+Voor de achtergrond:
+https://www.youtube.com/watch?v=fDSd2fudits
+heb ik alles nagemaakt in de background.html
+Samen met Ienne heb ik de code gemaakt om het in te laden in de index.html en werkende te krijgen.
