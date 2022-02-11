@@ -330,7 +330,7 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 1,
 		arrows: true,
-		slidesToScroll: 1
+		slidesToScroll: 1,
 	});
 
 	//dropdown menu
@@ -351,67 +351,57 @@ $(document).ready(function () {
 
 	//background icons
 	$('div.backgroundContainer').load('background.html');
-	$('div.backgroundContainer')
-		.css({ top: $('header').height() })
-		.height($('main #wrapper').height()); // CODE LINE IENNE
+	$('div.backgroundContainer');
+	// .css({ top: $('header').height() });
+	// .height($('main #wrapper').height()); // CODE LINE IENNE
 	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE
 
 	//basis demo
-	$(".demo1p1").on("click", function () {
+	$('.demo1p1').on('click', function () {
 		$(this).hide();
-
-
 	});
 
-	$("button").on("click", function () {
-		$(".demo1p2").hide();
-
+	$('button').on('click', function () {
+		$('.demo1p2').hide();
 	});
 
-	$("#home").on("click", function () {
-		$(".jquerySliderContainer").slick('slickGoTo', 0, false);
+	$('#home').on('click', function () {
+		$('.jquerySliderContainer').slick('slickGoTo', 0, false);
 	});
 
 	$('#tooltip1').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'fade',
-		trigger: 'hover'
+		trigger: 'hover',
 	});
 
 	$('#tooltip2').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'grow',
-		trigger: 'click'
+		trigger: 'click',
 	});
 
 	$('#tooltip3').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'swing',
-		trigger: 'hover'
+		trigger: 'hover',
 	});
 
 	$('#tooltip4').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'slide',
-		trigger: 'click'
+		trigger: 'click',
 	});
 
 	$('#tooltip5').tooltipster({
 		theme: 'tooltipster-punk',
 		animation: 'fall',
-		trigger: 'hover'
+		trigger: 'hover',
 	});
 
-
-	$(".fadetoggle").on("click", function () {
-		$(".div1").fadeToggle();
-		$(".div2").fadeToggle("slow");
-		$(".div3").fadeToggle(3000);
+	$('.fadetoggle').on('click', function () {
+		$('.div1').fadeToggle();
+		$('.div2').fadeToggle('slow');
+		$('.div3').fadeToggle(3000);
 	});
-
-
 });
-
-
-
-
