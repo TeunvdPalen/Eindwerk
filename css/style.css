@@ -678,7 +678,7 @@ textarea.parsley-error {
 }
 
 /* ---------- Jquery UI ----------- */
-
+/* Draggable */
 .jqueryui-flex {
 	display: flex;
 	justify-content: space-evenly;
@@ -690,4 +690,59 @@ textarea.parsley-error {
 	margin: 0;
 	width: 125px;
 	text-align: center;
+	border-radius: 10px;
+}
+
+.sleepbaar:hover {
+	cursor: crosshair;
+}
+
+/* Checkboxradio */
+.button-center {
+	display: flex;
+	justify-content: center;
+}
+
+.button-center button {
+	margin: 1rem 0;
+	padding: 1rem 2rem;
+	background-color: var(--color-primary);
+	color: white;
+	border-radius: 10px;
+	border: none;
+}
+
+.button-center button:hover {
+	cursor: pointer;
+}
+
+/* Color animation */
+
+.animation-grid {
+	display: grid;
+	grid-template-columns: repeat(5 1fr);
+	gap: 1rem;
+}
+
+.animation-grid p {
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+}
+
+#kleur1 {
+	background-color: #ea7038;
+}
+#kleur2 {
+	background-color: #0868ac;
+}
+#kleur3 {
+	background-color: #b94a48;
+}
+#kleur4 {
+	background-color: #468847;
+}
+#kleur5 {
+	background-color: #aa189e;
 }

@@ -34,24 +34,18 @@ $(document).ready(function () {
 				$('.bs-callout-warning').toggleClass('hidden', ok);
 			})
 			.on('form:submit', function () {
-				return false; // Don't submit form for this demo
+				return false;
 			});
 	});
 
 	// Index pagina inladen met andere paginas
 
 	$('a.panel').click(function () {
-		//select huidig item
 		current = $(this);
-
-		//scroll naar item
 		$('#wrapper').scrollTo($(this).attr('href'), 800);
-
-		//cancel link default behavior
 		return false;
 	});
 
-	//resize de items naar de nieuwe browser size
 	$(window).resize(function () {
 		resizePanel();
 	});
@@ -64,7 +58,6 @@ $(document).ready(function () {
 
 		$('#wrapper, .item').css({ width: width, height: height });
 		$('#mask').css({ width: mask_width, height: height });
-
 		$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
 	}
 
@@ -75,8 +68,70 @@ $(document).ready(function () {
 	$('#sleepbaar2').draggable({ axis: 'y' });
 	$('#sleepbaar3').draggable({ axis: 'x' });
 
-	//
+	// Checkboxradio
+	$(function () {
+		let $checkboxes = $('#checkboxradio input').checkboxradio();
+		$('.reset').on('click', function () {
+			$checkboxes.checkboxradio();
+		});
+	});
 
+	// Color animation
+	let $p1 = $('#kleur1');
+	let $p2 = $('#kleur2');
+	let $p3 = $('#kleur3');
+	let $p4 = $('#kleur4');
+	let $p5 = $('#kleur5');
+
+	$p1.hover(
+		function () {
+			kleur($(this), { backgroundColor: '#aa0000', color: '#fff' }, 1000);
+		},
+		function () {
+			kleur($(this), { backgroundColor: '#ea7038', color: '#000' }, 1000);
+		}
+	);
+
+	$p2.hover(
+		function () {
+			kleur($(this), { backgroundColor: '#a545ff', color: '#fff' }, 1000);
+		},
+		function () {
+			kleur($(this), { backgroundColor: '#0868ac', color: '#000' }, 1000);
+		}
+	);
+
+	$p3.hover(
+		function () {
+			kleur($(this), { backgroundColor: '#1af055', color: '#fff' }, 1000);
+		},
+		function () {
+			kleur($(this), { backgroundColor: '#b94a48', color: '#000' }, 1000);
+		}
+	);
+
+	$p4.hover(
+		function () {
+			kleur($(this), { backgroundColor: '#5f6198', color: '#fff' }, 1000);
+		},
+		function () {
+			kleur($(this), { backgroundColor: '#468847', color: '#000' }, 1000);
+		}
+	);
+
+	$p5.hover(
+		function () {
+			kleur($(this), { backgroundColor: '#b5c956', color: '#fff' }, 1000);
+		},
+		function () {
+			kleur($(this), { backgroundColor: '#aa189e', color: '#000' }, 1000);
+		}
+	);
+
+	function kleur(selectie, propertyWaarde1, speed) {
+		console.log(selectie, propertyWaarde1, speed);
+		selectie.stop().animate(propertyWaarde1, speed);
+	}
 	// Einde code Teun
 
 	//CODE IENNE
