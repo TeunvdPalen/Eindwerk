@@ -1,8 +1,11 @@
 $(document).ready(function () {
 	// Begin code Teun
 	// accordion jquery pagina
-	$('#accordion').accordion({
+	let $accordion = $('#accordion');
+
+	$accordion.accordion({
 		collapsible: true,
+		active: false,
 		icons: { header: 'ui-icon-plus', activeHeader: 'ui-icon-minus' },
 		heightStyle: 'content',
 	});
@@ -25,16 +28,18 @@ $(document).ready(function () {
 
 	// Formulier validatie
 	$(function () {
-		$('#demo-form')
+		/*$('#demo-form')
 			.parsley()
-			.on('field:validated', function () {
+			.on('field:validated', function ()
+			{
 				var ok = $('.parsley-error').length === 0;
 				$('.bs-callout-info').toggleClass('hidden', !ok);
 				$('.bs-callout-warning').toggleClass('hidden', ok);
 			})
-			.on('form:submit', function () {
+			.on('form:submit', function ()
+			{
 				return false; // Don't submit form for this demo
-			});
+			});*/
 	});
 
 	// Index pagina inladen met andere paginas
@@ -73,7 +78,7 @@ $(document).ready(function () {
 
 	// --TABS
 	let $tabs = $('#tabs');
-	$tabs.tabs({
+	$('#tabs').tabs({
 		active: 0,
 		show: { effect: 'blind', duration: 250 },
 		hide: { effect: 'blind', duration: 250 },
@@ -86,22 +91,22 @@ $(document).ready(function () {
 	let averageSpeed = 600;
 	let speed = 900;
 
-	let autocomplete = ['Basis', 'Events', 'Effecten', 'jQuery UI', 'Animatie', 'Plugin', 'Externe data', 'Home', 'jQuery', 'Contact', 'Datums', 'Voor wie', 'Over de cursus'];
+	let autocomplete = ['Basis', 'Events', 'Effecten', 'jQuery UI', 'Animatie', 'Plugins', 'Externe data', 'Home', 'jQuery', 'Contact', 'Datums', 'Voor wie', 'Over de cursus'];
 
 	let links = [
-		'jquery.html#basis',
-		'jquery.html#events',
-		'jquery.html#effecten',
-		'jquery.html#jquery-ui',
-		'jquery.html#animatie',
-		'jquery.html#plugin',
-		'jquery.html#externe-data',
-		'index.html',
-		'jquery.html',
-		'contact.html',
-		'index.html#tabs 2',
-		'index.html#tabs 1',
-		'index.html#tabs 0',
+		'#jquery #accordion 0',
+		'#jquery #accordion 1',
+		'#jquery #accordion 2',
+		'#jquery #accordion 3',
+		'#jquery #accordion 4',
+		'#jquery #accordion 5',
+		'#jquery #accordion 6',
+		'#index',
+		'#jquery',
+		'#contact',
+		'#index #tabs 2',
+		'#index #tabs 1',
+		'#index #tabs 0',
 	];
 
 	$('.fa-search').on('click', function () {
@@ -140,13 +145,18 @@ $(document).ready(function () {
 	function Search() {
 		if ($inputSearch.val() != '') {
 			for (let i = 0; i < autocomplete.length; ++i) {
-				//TODO extra bijzetten op het einde
 				if ($inputSearch.val() == autocomplete[i]) {
-					if (links[i].includes('index.html#tabs')) {
-						let idx = links[i].substring(links[i].indexOf(' '), links[i].length);
-						window.location.href = links[i];
-						$tabs.tabs('option', 'active', idx);
-					} else window.location.href = links[i];
+					if (links[i].includes(' ')) {
+						let page = links[i].substring(0, links[i].indexOf(' '));
+						let tool = links[i].substring(links[i].indexOf(' ') + 1, links[i].lastIndexOf(' '));
+						let idx = links[i].substring(links[i].lastIndexOf(' ') + 1, links[i].length);
+						$('#wrapper').scrollTo(page, 800, function () {
+							if (tool == '#accordion') $(tool).accordion('option', 'active', parseInt(idx));
+							else if (tool == '#tabs') $(tool).tabs('option', 'active', parseInt(idx));
+						});
+					}
+					//NORMAAL
+					else $('#wrapper').scrollTo(links[i], 800);
 
 					CloseSearch();
 				}
@@ -234,4 +244,33 @@ $(document).ready(function () {
 	}
 
 	//IENNE END
+
+	// Begin code Andreea
+
+	// slider carouser
+	$('.jquerySliderContainer ').slick({
+		infinite: true,
+		slidesToShow: 1,
+		arrows: false,
+		slidesToScroll: 1,
+	});
+
+	//dropdown menu
+	$('.dropdownToggle').hover(function () {
+		$('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
+	});
+
+	// link van de dropdown menu met slick slider
+	$('.jqueryDropdownList li').click(function () {
+		TrailerIndex = $(this).index() + 1;
+		$('.jquerySliderContainer').slick('slickGoTo', parseInt(TrailerIndex), false);
+	});
+
+	//animatie van de text op de home slide
+	setTimeout(function () {
+		$('.textAnimation').removeClass('hidden');
+	}, 1000);
+
+	//background icons
+	$('.backgroundContainer').load('background.html');
 });

@@ -7,16 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" />
-  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
-  <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link rel="stylesheet" href="css/layouts.css">
   <script src="https://kit.fontawesome.com/ff9694c54c.js" crossorigin="anonymous"></script>
   <title>JQuery</title>
 </head>
 
 <body>
+
   <div class="ui-helper-hidden"></div>
   <header>
     <div class="container">
+
       <div class="img_logo">
         <img src="img/jquery_logo-removebg-preview.png" alt="" />
       </div>
@@ -44,24 +47,35 @@
       </nav>
     </div>
   </header>
-  <div id="wrapper">
-    <div id="mask">
 
+  <div id="wrapper">
+    <div class="backgroundContainer"></div>
+
+    <div id="mask">
       <div id="index" class="item">
         <a name="index"></a>
-
         <main>
           <div class="container">
-            <!-- Andreea -->
+            <!-- Andreea start-->
             <div class="jquerySliderContainer">
               <div class="default slider slider7 slick-slide">
-                <img src="img/jquerySlideFrontImg.png" alt="JqueryStandaard" />
+                <ul class="textAnimation hidden">
+                  <li>J</li>
+                  <li>Q</li>
+                  <li>U</li>
+                  <li>E</li>
+                  <li>R</li>
+                  <li>Y</li>
+                </ul>
               </div>
               <div class="basis slider slider7 slick-slide">
 
               </div>
               <div class="events slider slider7 slick-slide">
-                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/RWrLVksS3Xw"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
               <div class="effecten slider slider7 slick-slide">
                 <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
@@ -69,17 +83,11 @@
               <div class="jqueryui slider slider7 slick-slide">
                 <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
               </div>
-              <div class="animatie slider slider7 slick-slide">
-                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-              </div>
-              <div class="plugins slider slider7 slick-slide">
-                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-              </div>
-              <div class="externedata slider slider7 slick-slide">
-                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-              </div>
+
             </div>
+            <!-- Andreea einde -->
             <!-- IENNE -->
+
             <div id="tabs">
               <ul>
                 <li><a href="#over-de-cursus">Over de cursus</a></li>
@@ -136,162 +144,190 @@
                 </p>
               </div>
             </div>
-            <!-- IENNE END -->
           </div>
         </main>
 
-      </div>
+        <div id="jquery" class="item">
+          <a name="jquery"></a>
 
-      <div id="jquery" class="item">
-        <a name="jquery"></a>
-
-        <main>
-          <div class="container">
-            <div id="accordion">
-              <h1 id="basis">Basis</h1>
-              <div>
-                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
-                  metus,
-                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
-                  viverra
-                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
-              </div>
-              <h1 id="events">Events</h1>
-              <div>
-                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
-                  metus,
-                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
-                  viverra
-                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
-              </div>
-              <h1 id="effecten">Effecten</h1>
-              <div>
-                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
-                  metus,
-                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
-                  viverra
-                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
-              </div>
-              <h1 id="jquery-ui">jQuery UI</h1>
-              <div>
-                <h1>Inleiding</h1>
-              </div>
-              <h1 id="animatie">Animatie</h1>
-              <div>
-                <img src="img/spotlights.png" alt="spotlights">
-                <img src="img/off.png" alt="light switch off">
-                <h1>Met jQuery UI animaties kan je jouw website animeren!</h1>
-              </div>
-              <h1 id="plugins">Plugins</h1>
-              <div>
-                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
-                  metus,
-                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin
-                  viverra
-                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
-              </div>
-              <h1 id="externe-data">Externe data</h1>
-              <div>
-                <h1>Upload een afbeelding</h1>
-                <form>
-                  <label for="upload">
-                    <i class="fa fa-cloud-upload"></i> Upload een afbeelding
-                  </label>
-                  <input id="upload" name='upload' type="file" accept="image/*" style="display:none;">
-                </form>
+          <main>
+            <div class="container">
+              <div id="accordion">
+                <h1 id="basis">Basis</h1>
                 <div>
-                  <img id="imgPreview" src="#" alt="afbeelding" style="display:none;">
+                  <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                    metus,
+                    molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                    Proin
+                    viverra
+                    leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
                 </div>
-              </div>
-            </div>
-          </div>
+                <h1 id="events">Events</h1>
+                <div>
+                  <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                    metus,
+                    molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                    Proin
+                    viverra
+                    leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
+                </div>
+                <h1 id="effecten">Effecten</h1>
+                <div>
+                  <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                    metus,
+                    molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                    Proin
+                    viverra
+                    leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
+                </div>
+                <h1 id="jquery-ui">jQuery UI</h1>
+                <div>
+                  <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                    metus,
+                    molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                    Proin
+                    viverra
+                    leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
+                </div>
+                <h1 id="animatie">Animatie</h1>
+                <div>
+                  <img src="img/spotlights.png" alt="spotlights">
+                  <div class="twinkle"></div>
+                  <h1>Met jQuery UI animaties kan je jouw website dynamischer maken!</h1>
+                </div>
+                <h1 id="plugins">Plugins</h1>
+                <div>
+                  <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                    metus,
+                    molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                    Proin
+                    viverra
+                    leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
+                </div>
+                <h1 id="externe-data">Externe data</h1>
+                <div>
+                  <h1>Upload een afbeelding</h1>
+                  <form>
+                    <label for="upload">
+                      <i class="fa fa-cloud-upload"></i> Upload een afbeelding
+                    </label>
+                    <input id="upload" name='upload' type="file" accept="image/*" style="display:none;">
+                  </form>
+                  <div>
+                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
+                      metus,
+                      molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+                      Proin
+                      viverra
+                      leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                    </p>
+                  </div>
+                  <h1 id="externe-data">Externe data</h1>
+                  <div>
+                    <h1>Upload een afbeelding</h1>
+                    <form>
+                      <label for="upload">
+                        <i class="fa fa-cloud-upload"></i> Upload een afbeelding
+                      </label>
+                      <input id="upload" name='upload' type="file" accept="image/*" style="display:none;">
+                    </form>
+                    <div>
+                      <img id="imgPreview" src="#" alt="afbeelding" style="display:none;">
+                    </div>
+                  </div>
+                </div>
 
-        </main>
+          </main>
+
+        </div>
+
+        <div id="contact" class="item">
+          <a name="contact"></a>
+
+          <main>
+            <div class="container">
+              <div class="grid-contact">
+                <article class="contact-info">
+                  <h1>Contact info</h1>
+                  <p><b>Telefoon:</b> 04 11 11 11 11</p>
+                  <p><b>E-mail:</b> query@mail.com</p>
+                  <p><b>adres:</b> Schachtplein 1</p>
+                  <p><b>Gemeente:</b> Heusden-zolder</p>
+                </article>
+                <section>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.7170280929263!2d5.326682915752819!3d51.03984687956102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12594d5049df9%3A0xe4e217ce1e2c8c54!2sSchachtplein%201%2C%203550%20Heusden-Zolder!5e0!3m2!1snl!2sbe!4v1644311538701!5m2!1snl!2sbe"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+              </div>
+              <form id="form" method="post" data-parsley-validate="">
+                <div class="form-grid">
+                  <label>
+                    Voornaam:<br> <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required=""
+                      data-parsley-length="[2,20]" data-parsley-pattern="^[a-zA-Z]+$">
+                  </label>
+                  <label>
+                    Naam:<br> <input type="text" name="naam" id="naam" placeholder="Naam" required=""
+                      data-parsley-length="[2,20]" data-parsley-pattern="^[a-zA-Z]+$">
+                  </label>
+
+                  <label>
+                    E-mail:<br> <input type="email" name="email" id="email" placeholder="E-mail" required="">
+                  </label>
+                  <label>
+                    Telefoon:<br> <input type="text" name="telefoon" id="telefoon" placeholder="Telefoon" required=""
+                      data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$"
+                      data-parsley-pattern-message="Enkel nummers is toegestaan" data-parsley-length="[8,13]">
+                  </label>
+
+                  <input type="submit" id="verzenden" value="Verzenden">
+                  <label>
+                    Bericht:<br> <textarea name="bericht" id="bericht" cols="100%" rows="7"
+                      placeholder="Vul hier uw bericht in ..." required="" data-parsley-length="[10,500]"></textarea>
+                  </label>
+
+
+              </form>
+            </div>
+          </main>
+
+        </div>
 
       </div>
-
-      <div id="contact" class="item">
-        <a name="contact"></a>
-
-        <main>
-          <div class="container">
-            <div class="grid-contact">
-              <article class="contact-info">
-                <h1>Contact info</h1>
-                <p><b>Telefoon:</b> 04 11 11 11 11</p>
-                <p><b>E-mail:</b> query@mail.com</p>
-                <p><b>adres:</b> Schachtplein 1</p>
-                <p><b>Gemeente:</b> Heusden-zolder</p>
-              </article>
-              <section>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.7170280929263!2d5.326682915752819!3d51.03984687956102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12594d5049df9%3A0xe4e217ce1e2c8c54!2sSchachtplein%201%2C%203550%20Heusden-Zolder!5e0!3m2!1snl!2sbe!4v1644311538701!5m2!1snl!2sbe"
-                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </section>
-            </div>
-            <form id="form" method="post" data-parsley-validate="">
-              <div class="form-grid">
-                <label>
-                  Voornaam:<br> <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required=""
-                    data-parsley-length="[2,20]" data-parsley-pattern="^[a-zA-Z]+$">
-                </label>
-                <label>
-                  Naam:<br> <input type="text" name="naam" id="naam" placeholder="Naam" required=""
-                    data-parsley-length="[2,20]" data-parsley-pattern="^[a-zA-Z]+$">
-                </label>
-
-                <label>
-                  E-mail:<br> <input type="email" name="email" id="email" placeholder="E-mail" required="">
-                </label>
-                <label>
-                  Telefoon:<br> <input type="text" name="telefoon" id="telefoon" placeholder="Telefoon" required=""
-                    data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$"
-                    data-parsley-pattern-message="Enkel nummers is toegestaan" data-parsley-length="[8,13]">
-                </label>
-              </div>
-
-              <label>
-                Bericht:<br> <textarea name="bericht" id="bericht" cols="100%" rows="7"
-                  placeholder="Vul hier uw bericht in ..." required="" data-parsley-length="[10,500]"></textarea>
-              </label>
-
-              <input type="submit" id="verzenden" value="Verzenden">
-
-
-            </form>
-          </div>
-        </main>
-
-      </div>
-
     </div>
+
   </div>
+
+
   <footer>
     <div class="container">
-      <div class="socialIcons">
-        <a href="https://www.facebook.com/cvodeverdieping"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://be.linkedin.com/company/cvodeverdieping"><i class="fab fa-linkedin"></i></i></a>
-        <a href="https://www.instagram.com/cvodeverdieping/"><i class="fab fa-instagram"></i></a>
-      </div>
+      <div class="justifyContainer">
+        <div class="socialIcons">
+          <a href="https://www.facebook.com/cvodeverdieping"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://be.linkedin.com/company/cvodeverdieping"><i class="fab fa-linkedin"></i></i></a>
+          <a href="https://www.instagram.com/cvodeverdieping/"><i class="fab fa-instagram"></i></a>
+        </div>
 
-      <div class="nuttigeLinks">
-        <a href="#"><img src="img/vschool-link-footer.png" alt="VSchool" /></a>
-        <a href="#"><img src="img/cvo-link-footer.png" alt="CVO-De-Verdieping" /></a>
-        <a href="#"><img src="img/jquery-link-footer.png" alt="JQuery" /></a>
-      </div>
+        <div class="nuttigeLinks">
+          <a href="#"><img src="img/vschool-link-footer.png" alt="VSchool" /></a>
+          <a href="#"><img src="img/cvo-link-footer.png" alt="CVO-De-Verdieping" /></a>
+          <a href="#"><img src="img/jquery-link-footer.png" alt="JQuery" /></a>
+        </div>
 
-      <div class="footerContactInfo">
-        <ul>
-          <li>CVO De Verdieping</li>
-          <li>011 53 87 33</li>
-          <li>jquery@mail.com</li>
-          <li>Schachtplein 1</li>
-          <li>3550 Heusden-Zolder</li>
-        </ul>
+        <div class="footerContactInfo">
+          <ul>
+            <li>CVO De Verdieping</li>
+            <li>011 53 87 33</li>
+            <li>jquery@mail.com</li>
+            <li>Schachtplein 1</li>
+            <li>3550 Heusden-Zolder</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -303,6 +339,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
   <script src="js/parsley.min.js"></script>
   <script src="js/nl.js"></script>
+  <script src="js/eindwerk.js"></script>
 
   <script>
     $(function () {
@@ -312,30 +349,6 @@
     });
   </script>
 
-  <script>
-    $(document).ready(function () {
-      $(".jquerySliderContainer ").slick({
-        infinite: true,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        lazyLoad: 'ondemand',
-        slidesToScroll: 1
-      });
-
-
-      $('.dropdownToggle').hover(function () {
-        $('.jqueryDropdownList').stop(true, false, false).fadeToggle(500);
-      });
-
-
-      $('.jqueryDropdownList li').click(function () {
-        TrailerIndex = $(this).index() + 1;
-        $(".jquerySliderContainer").slick('slickGoTo', parseInt(TrailerIndex), false);
-      });
-    });
-  </script>
-
-  <script src="js/eindwerk.js"></script>
 </body>
 
 </html>
