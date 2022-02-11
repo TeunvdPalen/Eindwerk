@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
   <link rel="stylesheet" href="css/layouts.css">
   <script src="https://kit.fontawesome.com/ff9694c54c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
   <title>JQuery</title>
 </head>
 
@@ -25,19 +26,10 @@
       </div>
       <nav>
         <ul class="main_nav">
-          <li><a href="#index" class="panel">Home</a></li>
+          <li><a href="#index" class="panel" id="home">Home</a></li>
           <li>
-            <a href="#jquery" class="panel">JQuery</a> <a href="#"><i
-                class="fas fa-arrow-circle-down arrowIcon dropdownToggle"></i></a>
-            <ul class="jqueryDropdownList dropdownToggle">
-              <li> <a href="#">Basis</a></li>
-              <li> <a href="#">Events</a></li>
-              <li> <a href="#">Effecten</a></li>
-              <li> <a href="#">JQuery UI</a></li>
-              <li> <a href="#">Animatie</a></li>
-              <li> <a href="#">Plugins</a></li>
-              <li> <a href="#">Externe data</a></li>
-            </ul>
+            <a href="#jquery" class="panel">JQuery</a>
+          </li>
           <li><a href="#contact" class="panel">Contact</a></li>
           <li class="searchbar">
             <input type="text" name="search" id="search" placeholder="zoeken..." value="" />
@@ -58,30 +50,17 @@
           <div class="container">
             <!-- Andreea start-->
             <div class="jquerySliderContainer">
-              <div class="default slider slider7 slick-slide">
-                <ul class="textAnimation hidden">
-                  <li>J</li>
-                  <li>Q</li>
-                  <li>U</li>
-                  <li>E</li>
-                  <li>R</li>
-                  <li>Y</li>
-                </ul>
+              <div class="slider slider7 slick-slide">
+                <img src="img/jquerySlideFrontImg.png" alt="jQuery">
               </div>
-              <div class="basis slider slider7 slick-slide">
-
+              <div class="slider slider7 slick-slide">
+                <img src="img/CVO-De-Verdieping-Heusden-Zolder.jpg" alt="CVO-De-Verdieping-Heusden-Zolder">
               </div>
-              <div class="events slider slider7 slick-slide">
-                <iframe width="900" height="506" src="https://www.youtube.com/embed/RWrLVksS3Xw"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+              <div class="slider slider7 slick-slide">
+                <img src="img/JQueryEx-min.png" alt="Voorbeeld">
               </div>
-              <div class="effecten slider slider7 slick-slide">
-                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
-              </div>
-              <div class="jqueryui slider slider7 slick-slide">
-                <img src="https://picsum.photos/600/300" alt="placeholder for testing" />
+              <div class="slider slider7 slick-slide">
+                <img src="img/CVOochtend.jfif" alt="CVO in de ochtend" />
               </div>
 
             </div>
@@ -151,6 +130,26 @@
             <div id="accordion">
               <h1 id="basis">Basis</h1>
               <div>
+                <p>De basiselementen die je moet kennen om met jQuery om te kunnen gaan: </p>
+                <ul>
+                  <li>core, selectors, attributes</li>
+                  <li>inleiding events</li>
+                  <li>jQuery variabele caching</li>
+                  <li>this keyword</li>
+                  <li>getters en setters</li>
+                </ul>
+
+                <p class="demo1p1">If you click on me, I will disappear.</p>
+                <p class="demo1p1">Click me away!</p>
+                <p class="demo1p1">Click me too!</p>
+
+                <h2>This is a heading</h2>
+
+                <p class="demo1p2">This is a paragraph.</p>
+                <p class="demo1p2">This is another paragraph.</p>
+                <button>Click me to hide paragraphs</button>
+
+
               </div>
               <h1 id="events">Events</h1>
               <div>
@@ -159,13 +158,11 @@
               </div>
               <h1 id="effecten">Effecten</h1>
               <div>
-                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
-                  metus,
-                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
-                  Proin
-                  viverra
-                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
+                <button class="fadetoggle">Click to fade in/out </button>
+                <br>
+                <div class="div1"></div><br>
+                <div class="div2"></div><br>
+                <div class="div3"></div><br>
               </div>
               <h1 id="jquery-ui">jQuery UI</h1>
               <div>
@@ -217,14 +214,14 @@
                 <h2>Met jQuery UI animaties kan je jouw website dynamischer maken!</h2>
               </div>
               <h1 id="plugins">Plugins</h1>
-              <div>
-                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi
-                  metus,
-                  molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
-                  Proin
-                  viverra
-                  leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
+              <div class="tooltipContainer">
+
+                <span class="tooltipLayout" id="tooltip1" title="This is my span's tooltip message1!">Hover</span>
+                <span class="tooltipLayout" id="tooltip2" title="This is my span's tooltip message2!">Click</span>
+                <span class="tooltipLayout" id="tooltip3" title="This is my span's tooltip message3!">Hover</span>
+                <span class="tooltipLayout" id="tooltip4" title="This is my span's tooltip message4!">Click</span>
+                <span class="tooltipLayout" id="tooltip5" title="This is my span's tooltip message5!">Hover</span>
+
               </div>
               <h1 id="externe-data">Externe data</h1>
               <div>
@@ -328,19 +325,20 @@
 
   </footer>
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script type="text/javascript" src=" ./js/slick.min.js "></script>
+
+  <script type="text/javascript" src="./js/tooltipster.bundle.js"></script>
+  <script type="text/javascript" src="./js/slick.min.js "></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
-  <script src="js/parsley.min.js"></script>
-  <script src="js/nl.js"></script>
-  <script src="js/eindwerk.js"></script>
+  <script src="./js/parsley.min.js"></script>
+  <script src="./js/nl.js"></script>
+  <script src="./js/eindwerk.js"></script>
 
   <script>
-    $(function ()
-    {
-      if ($('.ui-helper-hidden:first').is(':visible') === true)
-      {
+    $(function () {
+      if ($('.ui-helper-hidden:first').is(':visible') === true) {
         $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
       }
     });

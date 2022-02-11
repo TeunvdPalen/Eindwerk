@@ -274,8 +274,8 @@ $(document).ready(function () {
 	$('.jquerySliderContainer ').slick({
 		infinite: true,
 		slidesToShow: 1,
-		arrows: false,
-		slidesToScroll: 1,
+		arrows: true,
+		slidesToScroll: 1
 	});
 
 	//dropdown menu
@@ -300,4 +300,63 @@ $(document).ready(function () {
 		.css({ top: $('header').height() })
 		.height($('main #wrapper').height()); // CODE LINE IENNE
 	//$('main').css({ 'padding-bottom': $('footer').height() }); // CODE LINE IENNE
+
+	//basis demo
+	$(".demo1p1").on("click", function () {
+		$(this).hide();
+
+
+	});
+
+	$("button").on("click", function () {
+		$(".demo1p2").hide();
+
+	});
+
+	$("#home").on("click", function () {
+		$(".jquerySliderContainer").slick('slickGoTo', 0, false);
+	});
+
+	$('#tooltip1').tooltipster({
+		theme: 'tooltipster-punk',
+		animation: 'fade',
+		trigger: 'hover'
+	});
+
+	$('#tooltip2').tooltipster({
+		theme: 'tooltipster-punk',
+		animation: 'grow',
+		trigger: 'click'
+	});
+
+	$('#tooltip3').tooltipster({
+		theme: 'tooltipster-punk',
+		animation: 'swing',
+		trigger: 'hover'
+	});
+
+	$('#tooltip4').tooltipster({
+		theme: 'tooltipster-punk',
+		animation: 'slide',
+		trigger: 'click'
+	});
+
+	$('#tooltip5').tooltipster({
+		theme: 'tooltipster-punk',
+		animation: 'fall',
+		trigger: 'hover'
+	});
+
+
+	$(".fadetoggle").on("click", function () {
+		$(".div1").fadeToggle();
+		$(".div2").fadeToggle("slow");
+		$(".div3").fadeToggle(3000);
+	});
+
+
 });
+
+
+
+
