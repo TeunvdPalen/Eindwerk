@@ -19,14 +19,8 @@ body {
 }
 
 main {
-	/*padding: 3rem 0;*/
-	/*margin-bottom: 150px;*/
-}
-
-.backgroundContainer {
-	position: absolute;
-	width: 100%;
-	z-index: 0;
+	padding: 3rem 0;
+	margin-bottom: 150px;
 }
 
 /* --------------- LOADED BACKGROUND FROM BACKGROUND.HTML CSS --------*/
@@ -37,15 +31,16 @@ main {
 }
 
 .interactiveBackground {
-	position: absolute;
-	width: 100vw;
+	position: fixed;
+	width: 100%;
 	height: 100vh;
 	background: white;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
 	display: table-cell;
-	z-index: -100;
+	top: 0;
+	z-index: 0;
 }
 
 .interactiveBackground .row {
@@ -109,6 +104,8 @@ main {
 /* ------------------------ HEADER CSS ---------------------- */
 header {
 	background-color: var(--color-primary);
+	position: relative;
+	z-index: 1;
 }
 
 header .container {
@@ -329,6 +326,8 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 60px 0;
+	position: relative;
+	z-index: 1;
 }
 
 .justifyContainer {
@@ -494,6 +493,10 @@ textarea#bericht {
 	border-radius: 7px;
 	border: none;
 	padding: 7px 10px;
+}
+
+textarea#bericht {
+	resize: none;
 }
 
 #verzenden {
@@ -681,7 +684,7 @@ textarea.parsley-error {
 }
 
 /* ---------- Jquery UI ----------- */
-
+/* Draggable */
 .jqueryui-flex {
 	display: flex;
 	justify-content: space-evenly;
@@ -693,6 +696,61 @@ textarea.parsley-error {
 	margin: 0;
 	width: 125px;
 	text-align: center;
+	border-radius: 10px;
+}
+
+.sleepbaar:hover {
+	cursor: crosshair;
+}
+
+/* Checkboxradio */
+.button-center {
+	display: flex;
+	justify-content: center;
+}
+
+.button-center button {
+	margin: 1rem 0;
+	padding: 1rem 2rem;
+	background-color: var(--color-primary);
+	color: white;
+	border-radius: 10px;
+	border: none;
+}
+
+.button-center button:hover {
+	cursor: pointer;
+}
+
+/* Color animation */
+
+.animation-grid {
+	display: grid;
+	grid-template-columns: repeat(5 1fr);
+	gap: 1rem;
+}
+
+.animation-grid p {
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+}
+
+#kleur1 {
+	background-color: #ea7038;
+}
+#kleur2 {
+	background-color: #0868ac;
+}
+#kleur3 {
+	background-color: #b94a48;
+}
+#kleur4 {
+	background-color: #468847;
+}
+#kleur5 {
+	background-color: #aa189e;
 }
 
 /* plugins */

@@ -22,7 +22,7 @@
     <div class="container">
 
       <div class="img_logo">
-        <img src="img/jquery_logo-removebg-preview.png" alt="" />
+        <a href="#index" class="panel"><img src="img/jquery_logo-removebg-preview.png" alt="" /></a>
       </div>
       <nav>
         <ul class="main_nav">
@@ -176,7 +176,7 @@
                   <li>Extra Effects, bv. color animation, shaking, explode,...</li>
                   <li>Interacties, bv. drag & drop, sorteren,...</li>
                 </ul>
-                <p>https://jqueryui.com/</p>
+                <p><a href="https://jqueryui.com/">jQuery UI</a></p>
 
                 <h1>Interactions - Draggable</h1>
                 <div class="jqueryui-flex">
@@ -192,19 +192,38 @@
                 </div>
 
                 <h1>Widgets - checkboxradio</h1>
-                <div>
+                <form id="checkboxradio">
+                  <input type="checkbox" id="checkbox-1">
+                  <label for="checkbox-1">Checkbox voorbeeld 1</label>
 
-                </div>
+                  <input type="checkbox" id="checkbox-2">
+                  <label for="checkbox-2">Checkbox voorbeeld 2</label>
+
+                  <label for="radio-1">Radio voorbeeld 1</label>
+                  <input type="radio" id="radio-1" name="radio">
+
+                  <label for="radio-2">Radio voorbeeld 2</label>
+                  <input type="radio" id="radio-2" name="radio">
+                  <br>
+                  <div class="button-center">
+                    <button class="reset" type="reset">Reset</button>
+                  </div>
+                </form>
 
                 <h1>Effects- Color animation</h1>
-                <div>
-
+                <div class="animation-grid">
+                  <p id="kleur1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, provident.</p>
+                  <p id="kleur2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, accusamus.</p>
+                  <p id="kleur3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, iure.</p>
+                  <p id="kleur4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur?</p>
+                  <p id="kleur5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nam.</p>
                 </div>
+
 
                 <h1>ThemeRoller</h1>
                 <p>
                   Met ThemeRoller kan je keizen uit voorgemaakte themes of je eigen design Theme maken en zo makkelijk
-                  een uniform UI maken
+                  een uniform UI maken <a href="https://jqueryui.com/themeroller/">Klik hier</a>
                 </p>
               </div>
               <h1 id="animatie">Animatie</h1>
